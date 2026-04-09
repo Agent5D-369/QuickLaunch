@@ -1,0 +1,255 @@
+================================================================
+QUICKLAUNCH CONSULTING — CANVA MAGIC MEDIA PROMPTS
+================================================================
+Instructions: In Canva, use "Magic Media" (AI image generator).
+Paste each prompt exactly. Select "Photo" or "Illustration" style
+as specified. Generate 3–4 variants and pick the strongest.
+Target dimensions are noted per image.
+================================================================
+
+
+----------------------------------------------------------------
+FILE: assets/images/hero-main.jpg
+PAGE: index.html — Hero section (right column visual)
+DIMENSIONS: 600×600px (square)
+STYLE: Photorealistic / Cinematic
+----------------------------------------------------------------
+PROMPT:
+A confident, mission-driven founder standing at the edge of a
+dramatic digital landscape at dawn, looking forward with calm
+determination. Behind them, a glowing rocket launches upward
+through layered clouds, trailing electric blue and orange-gold
+light. The landscape below is an intricate circuit-board grid
+that transitions into lush green terrain — technology meeting
+regeneration. Deep navy sky with stars and a subtle aurora.
+Cinematic lighting, ultra high resolution, editorial photography
+style. Color palette: deep navy #060D1B, electric blue #0A6EFF,
+warm orange-gold #FF6B2B. No text. No logos. Photorealistic.
+
+
+----------------------------------------------------------------
+FILE: assets/images/hero-main-alt.jpg
+PAGE: index.html — Hero section (alternative option)
+DIMENSIONS: 600×600px
+STYLE: Digital Art / Conceptual
+----------------------------------------------------------------
+PROMPT:
+Abstract 3D visualization of a glowing architectural blueprint
+transforming into a launched rocket. Deep navy background with
+intricate glowing blue circuit patterns forming the shape of a
+rocket trajectory path. Orange and gold sparks mark decision
+checkpoints along the path. The image has depth and dimension —
+layers of structure becoming momentum. Clean, modern, premium.
+Color palette: #060D1B navy, #0A6EFF blue, #FF6B2B orange.
+Ultra high resolution. No text.
+
+
+----------------------------------------------------------------
+FILE: assets/images/collapse-diagnostic.jpg
+PAGE: index.html — StopTheCollapse bridge section
+DIMENSIONS: 800×600px (landscape)
+STYLE: Editorial Photography / Conceptual
+----------------------------------------------------------------
+PROMPT:
+A dramatic overhead aerial view of a complex architectural
+structure mid-collapse — one section remains strong and lit with
+blue light, while the other is crumbling into shadow and warm
+red-orange dust. The contrast between structure and collapse is
+stark and visually arresting. The surviving section has visible
+grid lines and clear geometry — representing intentional design.
+Shot from directly above, cinematic depth of field, dark dramatic
+lighting. Color palette: deep navy background, electric blue for
+the strong section, orange-red dust for the collapsing section.
+No people. No text. Photorealistic.
+
+
+----------------------------------------------------------------
+FILE: assets/images/collapse-guide-cover.jpg
+PAGE: index.html + diagnostic.html — Lead magnet book cover
+DIMENSIONS: 280×360px (portrait / book cover ratio)
+STYLE: Graphic Design / Book Cover Illustration
+----------------------------------------------------------------
+PROMPT:
+A premium digital book cover design with a dark navy background.
+Title text area (leave blank — will be added in Canva):
+"THE 7 COLLAPSE PATTERNS DIAGNOSTIC".
+Large central visual: a fractured hexagonal structure with 7
+glowing cracks radiating outward from a central point, each crack
+labeled with a number 1–7. The cracks glow with orange-red light,
+suggesting heat and structural failure. The overall shape is
+contained within a clean geometric border. Modern, premium,
+authoritative design aesthetic. Color palette: #060D1B navy
+background, #FF6B2B orange glow, #0A6EFF blue accents.
+High contrast. Professional. No text (will be added in Canva).
+
+
+----------------------------------------------------------------
+FILE: assets/images/phase1-workshop.jpg
+PAGE: the-path.html — Phase 1 section visual
+DIMENSIONS: 600×450px (landscape)
+STYLE: Photorealistic / Editorial
+----------------------------------------------------------------
+PROMPT:
+A focused facilitation session in a modern, minimal workspace.
+A skilled facilitator stands at a large digital whiteboard covered
+in glowing sticky notes, concept clusters, and connecting arrows.
+The room has warm accent lighting — electric blue and soft gold.
+Around a sleek table, 4–6 engaged participants are leaning forward,
+animated and focused. The whiteboard shows a purpose statement
+framework mid-construction — abstract but clearly structured.
+The atmosphere is serious, energized, and purposeful. Cinematic
+photography style, shallow depth of field. No visible text on
+whiteboard. Color palette: navy walls, blue screen glow, warm
+gold ambient light.
+
+
+----------------------------------------------------------------
+FILE: assets/images/phase2-mvp.jpg
+PAGE: the-path.html — Phase 2 section visual
+DIMENSIONS: 600×450px (landscape)
+STYLE: Conceptual Illustration / 3D Render
+----------------------------------------------------------------
+PROMPT:
+A sleek rocket breaking through a layered cloud barrier at high
+speed, leaving a clean contrail of electric blue and orange-gold
+light. Below the clouds: a maze of complex, unsolved problems
+rendered as tangled dark pathways. Above the clouds: open, clear
+blue sky with a visible upward trajectory arc marked by bright
+waypoints. The image conveys breakthrough, validation, and
+momentum. Modern 3D illustration style, ultra clean, premium
+aesthetic. Color palette: #0A6EFF blue, #FF6B2B orange,
+#060D1B navy. No text. No logos.
+
+
+----------------------------------------------------------------
+FILE: assets/images/phase3-execution.jpg
+PAGE: the-path.html — Phase 3 section visual
+DIMENSIONS: 600×450px (landscape)
+STYLE: Conceptual 3D / Architecture
+----------------------------------------------------------------
+PROMPT:
+An elegant 3D architectural blueprint coming to life — geometric
+lines and frameworks glowing electric blue against a deep navy
+background, transforming from flat 2D plans into standing
+3-dimensional structure. The structure is modular and clearly
+organized — roles, connections, and decision paths visible as
+glowing nodes and edges. Orange accent lights mark the critical
+execution paths. The image feels like strategy becoming
+operational — infrastructure materializing from intention.
+Premium, editorial, technically beautiful. Color palette:
+#060D1B navy, #0A6EFF blue, #FF6B2B orange. No text.
+
+
+----------------------------------------------------------------
+FILE: assets/images/rick-broider.jpg
+PAGE: index.html + the-path.html — About Rick section
+DIMENSIONS: 400×400px (square, used in circle crop)
+STYLE: Professional Portrait Photography
+----------------------------------------------------------------
+PROMPT:
+A confident, thoughtful founder-advisor in his 40s or 50s,
+photographed in a modern minimal workspace with warm indirect
+lighting. He is seated slightly forward, direct eye contact,
+relaxed but authoritative posture. Background: a softly blurred
+bookshelf and dark wall with subtle blue ambient light.
+Wearing: smart-casual — dark shirt or blazer, no tie.
+The expression conveys both warmth and precision — someone who
+has seen things go wrong and knows exactly how to fix them.
+Shot on a 50mm lens, shallow depth of field, editorial
+photography quality. Color palette: dark background, warm skin
+tones, subtle blue rim light. No text.
+
+NOTE: Replace with Rick's actual photo when available.
+This placeholder prompt generates a professional stand-in.
+
+
+----------------------------------------------------------------
+FILE: assets/images/og-image.jpg
+PAGE: All pages — Open Graph / Social sharing thumbnail
+DIMENSIONS: 1200×630px (standard OG image)
+STYLE: Graphic Design / Brand
+----------------------------------------------------------------
+PROMPT:
+A wide-format social media preview card with a deep navy
+background (#060D1B). Left side: a bold headline text area
+(leave blank for Canva text overlay): "Structure That Survives
+Contact With Reality." Right side: the QuickLaunch rocket logo
+mark (a rocket inside a triangle/mountain silhouette) rendered
+in electric blue and orange-gold, large and centered.
+Background texture: subtle circuit-grid pattern at very low
+opacity. Electric blue gradient accent bar along the bottom edge.
+Clean, premium, instantly recognizable brand aesthetic.
+Color palette: #060D1B navy, #0A6EFF blue, #FF6B2B orange.
+No small text — only the large headline zone and the logo mark.
+
+
+----------------------------------------------------------------
+FILE: assets/images/testimonial-avatar-1.jpg
+FILE: assets/images/testimonial-avatar-2.jpg
+FILE: assets/images/testimonial-avatar-3.jpg
+PAGE: index.html — Testimonials section avatars
+DIMENSIONS: 96×96px (circle crop)
+STYLE: Professional Headshot Photography
+----------------------------------------------------------------
+PROMPT (Avatar 1 — Female founder, 30s–40s, regenerative project):
+A warm, confident woman in her late 30s to early 40s, outdoors
+in a natural setting — jungle or garden background softly blurred.
+Direct eye contact, genuine smile, strong and grounded presence.
+Natural lighting, editorial portrait quality. No text.
+
+PROMPT (Avatar 2 — Male CTO, 30s, tech):
+A focused, analytical man in his early 30s in a modern tech office
+environment, softly blurred background with blue screen glow.
+Confident, intelligent expression. Clean background.
+Editorial headshot quality. No text.
+
+PROMPT (Avatar 3 — Female fractional COO, 40s, professional):
+A polished, authoritative woman in her 40s in a clean corporate
+or co-working space. Blazer, confident posture, direct gaze.
+Warm professional lighting, editorial photography quality. No text.
+
+NOTE: Replace all three with real client photos when available.
+Use with permission and proper attribution only.
+
+
+================================================================
+CANVA SETUP INSTRUCTIONS
+================================================================
+
+1. Open Canva → Create new design
+2. Set custom dimensions as specified per image above
+3. Go to Elements → Magic Media → Text to Image
+4. Paste the prompt (remove the NOTE lines)
+5. Select style: "Photo" for photorealistic prompts,
+   "Illustration" for conceptual/3D prompts
+6. Generate 4 variations, download the best at highest resolution
+7. Save to: assets/images/[filename as specified above]
+
+ADDITIONAL TIPS:
+- For the book cover: generate the base image, then add text
+  in Canva using the brand fonts (Montserrat 900 for title)
+- For Rick's portrait: use the placeholder until a real photo
+  is available — do not publish the AI placeholder on live site
+- For OG image: add text overlay in Canva after generating
+  the background — use Montserrat 900, white, 72px+
+- Run all final images through Canva's "Background Remover"
+  if you need transparent versions (for badges, logos, etc.)
+- Export all photos as JPG at 85% quality for web performance
+- Export any transparent elements as PNG
+
+================================================================
+BRAND REFERENCE FOR ALL IMAGES
+================================================================
+Primary Blue:   #0A6EFF
+Light Blue:     #00C6FF
+Orange:         #FF6B2B
+Gold:           #F5A623
+Navy Dark:      #060D1B
+Navy Medium:    #0A1628
+White:          #FFFFFF
+Gray Muted:     #94A3B8
+
+Fonts (for any Canva text overlays):
+Heading:        Montserrat ExtraBold / Black (weight 800–900)
+Body:           Inter Regular / Medium (weight 400–500)
+================================================================

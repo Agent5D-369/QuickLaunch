@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 7 Collapse Patterns Diagnostic — Free Guide | QuickLaunch Consulting</title>
+  <meta name="description" content="Get the free 7 Collapse Patterns Diagnostic. Name the exact structural pattern threatening your project right now. Used by founders, teams, and regenerative projects worldwide.">
+  <link rel="canonical" href="https://quicklaunchconsulting.com/diagnostic.html">
+  <meta property="og:title" content="Free: The 7 Collapse Patterns Diagnostic">
+  <meta property="og:description" content="Name your collapse pattern before it names you. 5 minutes. Total structural clarity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .diag-hero {
+      padding: 140px 0 var(--sp-20);
+      position: relative; overflow: hidden;
+      background:
+        radial-gradient(ellipse 70% 60% at 30% 40%, rgba(255,107,43,0.15) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 55% at 75% 60%, rgba(10,110,255,0.15) 0%, transparent 50%),
+        var(--navy);
+    }
+    .diag-hero-grid {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 100% 80% at 50% 50%, black 0%, transparent 70%);
+    }
+    .diag-layout {
+      display: grid; grid-template-columns: 1fr;
+      gap: var(--sp-12); align-items: start;
+    }
+    @media (min-width: 1024px) {
+      .diag-layout { grid-template-columns: 1fr 420px; }
+    }
+    .diag-form-sticky {
+      position: sticky; top: 100px;
+    }
+    .diag-form-card {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: var(--sp-8);
+      box-shadow: var(--shadow-lg), var(--shadow-glow);
+    }
+    .diag-book-cover {
+      width: 180px; margin: 0 auto var(--sp-6);
+      position: relative;
+    }
+    .diag-book-cover img {
+      border-radius: var(--r-md);
+      box-shadow: 12px 12px 0 rgba(255,107,43,0.2), var(--shadow-md);
+      transform: rotate(-2deg);
+    }
+    .diag-book-cover-placeholder {
+      width: 180px; height: 230px; border-radius: var(--r-md);
+      background: linear-gradient(135deg, var(--navy-3) 0%, var(--navy-4) 100%);
+      border: 1px solid var(--border-2);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: var(--sp-3); padding: var(--sp-4); text-align: center;
+      box-shadow: 12px 12px 0 rgba(255,107,43,0.15), var(--shadow-md);
+      transform: rotate(-2deg);
+    }
+    .diag-book-cover-placeholder .book-icon {
+      width: 52px; height: 52px; display: flex; align-items: center; justify-content: center;
+      background: rgba(255,107,43,0.15); border-radius: 10px; color: var(--orange);
+      margin: 0 auto;
+    }
+    .diag-book-cover-placeholder .book-title {
+      font-family: var(--font-h); font-size: var(--text-sm); font-weight: 800;
+      line-height: 1.3;
+    }
+    .diag-book-cover-placeholder .book-sub {
+      font-size: var(--text-xs); color: var(--muted);
+    }
+    .free-badge-large {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--grad-orange); font-family: var(--font-h);
+      font-size: var(--text-xs); font-weight: 900; text-transform: uppercase;
+      letter-spacing: 0.05em; box-shadow: var(--shadow-orange);
+      position: absolute; top: -12px; right: -12px;
+      animation: badge-pulse 3s ease-in-out infinite;
+    }
+
+    .pattern-card {
+      padding: var(--sp-8);
+      background: var(--glass); border: 1px solid var(--border);
+      border-radius: var(--r-lg); transition: var(--t-base);
+      display: flex; gap: var(--sp-6);
+    }
+    .pattern-card:hover {
+      background: var(--glass-2); border-color: rgba(255,107,43,0.2);
+      transform: translateX(4px);
+    }
+    .pattern-num-large {
+      font-family: var(--font-h); font-size: var(--text-4xl); font-weight: 900;
+      color: var(--orange); flex-shrink: 0; line-height: 1; min-width: 48px;
+    }
+    .pattern-body h3 { font-size: var(--text-xl); font-weight: 800; margin-bottom: var(--sp-2); }
+    .pattern-body p { color: var(--muted); font-size: var(--text-base); line-height: 1.7; margin-bottom: var(--sp-3); }
+    .pattern-symptoms {
+      display: flex; flex-wrap: wrap; gap: var(--sp-2);
+    }
+    .pattern-symptom {
+      padding: var(--sp-1) var(--sp-3);
+      background: rgba(255,107,43,0.08); border: 1px solid rgba(255,107,43,0.15);
+      border-radius: var(--r-pill); font-size: var(--text-xs); color: var(--orange-2);
+      font-weight: 600;
+    }
+    .severity-banner {
+      padding: var(--sp-8);
+      background: linear-gradient(135deg, rgba(255,107,43,0.1), rgba(245,166,35,0.05));
+      border: 1px solid rgba(255,107,43,0.2); border-radius: var(--r-lg);
+      margin: var(--sp-8) 0;
+    }
+    .severity-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-4);
+      margin-top: var(--sp-6);
+    }
+    @media (max-width: 639px) { .severity-grid { grid-template-columns: 1fr; } }
+    .severity-item {
+      padding: var(--sp-5); border-radius: var(--r-md); text-align: center;
+    }
+    .severity-item--yellow { background: rgba(245,166,35,0.1); border: 1px solid rgba(245,166,35,0.2); }
+    .severity-item--orange { background: rgba(255,107,43,0.1); border: 1px solid rgba(255,107,43,0.25); }
+    .severity-item--red    { background: rgba(239,68,68,0.1);  border: 1px solid rgba(239,68,68,0.25); }
+    .severity-num {
+      font-family: var(--font-h); font-size: var(--text-4xl); font-weight: 900;
+      display: block; margin-bottom: var(--sp-2);
+    }
+    .severity-item--yellow .severity-num { color: var(--gold); }
+    .severity-item--orange .severity-num { color: var(--orange); }
+    .severity-item--red .severity-num { color: #EF4444; }
+    .who-gets-it {
+      display: grid; grid-template-columns: 1fr;
+      gap: var(--sp-4); margin-top: var(--sp-8);
+    }
+    @media (min-width: 640px) { .who-gets-it { grid-template-columns: 1fr 1fr 1fr; } }
+    .who-item {
+      padding: var(--sp-5); background: var(--glass); border: 1px solid var(--border);
+      border-radius: var(--r-md); text-align: center;
+    }
+    .who-item-icon {
+      width: 52px; height: 52px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: var(--sp-3);
+      background: rgba(10,110,255,0.12); border: 1px solid rgba(10,110,255,0.2);
+      border-radius: 12px; color: var(--blue-2);
+    }
+    .who-item strong { display: block; margin-bottom: var(--sp-2); font-size: var(--text-sm); }
+    .who-item p { color: var(--muted); font-size: var(--text-xs); line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="QuickLaunch Home">
+      <span class="nav-logo-text">Quick<span>Launch</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="the-path.html">The Path</a>
+      <a href="index.html#who">Who It's For</a>
+      <a href="apply.html" class="btn btn-primary btn-sm">Book Fit Call</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="the-path.html">The Path</a>
+  <a href="apply.html" class="btn btn-primary btn-lg">Book Fit Call</a>
+</div>
+
+<!-- HERO -->
+<section class="diag-hero" aria-label="Diagnostic hero">
+  <div class="diag-hero-grid" aria-hidden="true"></div>
+  <div class="container">
+    <div style="max-width:800px;margin:0 auto;text-align:center">
+      <div style="display:inline-flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-5);background:rgba(255,107,43,0.1);border:1px solid rgba(255,107,43,0.25);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:700;color:var(--orange-2);margin-bottom:var(--sp-6)" class="reveal">
+        Free Resource — No Credit Card Required
+      </div>
+      <h1 class="reveal reveal-delay-1" style="font-size:var(--text-6xl);font-weight:900;line-height:1.1;margin-bottom:var(--sp-6)">
+        Name Your Collapse Pattern<br>
+        <span class="text-gradient-orange">Before It Names You.</span>
+      </h1>
+      <p class="reveal reveal-delay-2" style="font-size:var(--text-xl);color:var(--muted);max-width:640px;margin:0 auto var(--sp-8);line-height:1.75">
+        The <strong style="color:var(--white)">7 Collapse Patterns Diagnostic</strong> reveals the exact structural
+        failure point threatening your project right now. Five minutes.
+        Total clarity. No generic advice — only a precise map of your specific situation.
+      </p>
+      <div class="reveal reveal-delay-3">
+        <a href="#get-diagnostic" class="btn btn-primary btn-xl">
+          Get the Free Diagnostic
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO GETS THE MOST FROM THIS -->
+<section class="section--tight section--dark-2" aria-labelledby="who-diag-heading">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:var(--sp-8)">
+      <div class="section-label">Built For</div>
+      <h2 style="font-size:var(--text-4xl);font-weight:900" id="who-diag-heading">
+        Who Gets the Most From This Diagnostic
+      </h2>
+    </div>
+    <div class="who-gets-it">
+      <div class="who-item reveal">
+        <span class="who-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+        <strong>Regenerative Projects &amp; Communities</strong>
+        <p>Intentional communities, retreat centers, eco-projects, land cooperatives facing stakeholder conflict and governance breakdown</p>
+      </div>
+      <div class="who-item reveal reveal-delay-1">
+        <span class="who-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+        <strong>Founders Under Structural Pressure</strong>
+        <p>Founder-dependent businesses where growth is stalling because the structure hasn't evolved with the vision</p>
+      </div>
+      <div class="who-item reveal reveal-delay-2">
+        <span class="who-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <strong>Teams Building Without Proof</strong>
+        <p>Product teams, startup operators, and mission-driven builders who are moving fast toward a cliff they haven't seen yet</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT + FORM -->
+<section class="section section--dark" id="patterns" aria-labelledby="patterns-heading">
+  <div class="container">
+    <div class="diag-layout">
+
+      <!-- LEFT: The 7 Patterns -->
+      <div>
+        <div class="section-label reveal">The 7 Patterns</div>
+        <h2 class="section-h2 reveal reveal-delay-1" id="patterns-heading">
+          The Structural Patterns Behind<br>
+          <span class="text-gradient">Most Project Failures</span>
+        </h2>
+        <p class="reveal reveal-delay-2" style="color:var(--muted);font-size:var(--text-lg);max-width:680px;margin-bottom:var(--sp-12);line-height:1.75">
+          These are not personality failures or character flaws. They are repeatable, nameable,
+          and fixable structural patterns. The first step to fixing them is seeing them clearly.
+        </p>
+
+        <div style="display:flex;flex-direction:column;gap:var(--sp-4)">
+
+          <div class="pattern-card reveal">
+            <div class="pattern-num-large">01</div>
+            <div class="pattern-body">
+              <h3>Governance Shadow</h3>
+              <p>One person — usually the founder or a dominant personality — makes or quietly vetos all significant decisions, even when a governance structure technically exists. Everyone knows it. Nobody names it. The shadow grows.</p>
+              <div class="pattern-symptoms">
+                <span class="pattern-symptom">Decisions stall without one person's approval</span>
+                <span class="pattern-symptom">Official structure is ignored in practice</span>
+                <span class="pattern-symptom">Resentment building beneath compliance</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pattern-card reveal">
+            <div class="pattern-num-large">02</div>
+            <div class="pattern-body">
+              <h3>Vision Drift</h3>
+              <p>The mission shifts so gradually that nobody can pinpoint when or why it changed. The team is executing against a vision that no longer reflects what the founder wants — or against three competing visions nobody has officially retired.</p>
+              <div class="pattern-symptoms">
+                <span class="pattern-symptom">Strategy meetings produce confusion not clarity</span>
+                <span class="pattern-symptom">Team members describe the mission differently</span>
+                <span class="pattern-symptom">Prior decisions constantly reopened</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pattern-card reveal">
+            <div class="pattern-num-large">03</div>
+            <div class="pattern-body">
+              <h3>Founder Bottleneck</h3>
+              <p>The organization functions as an extension of one person's nervous system. Every important decision, relationship, or crisis routes back through the founder. Growth is impossible because capacity cannot scale beyond one human.</p>
+              <div class="pattern-symptoms">
+                <span class="pattern-symptom">Founder cannot take a real vacation</span>
+                <span class="pattern-symptom">Team capable but perpetually waiting</span>
+                <span class="pattern-symptom">Founder exhausted and quietly resentful</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pattern-card reveal">
+            <div class="pattern-num-large">04</div>
+            <div class="pattern-body">
+              <h3>Financial Fragility</h3>
+              <p>Revenue is present but the financial architecture is brittle — one lost client, one delayed payment, or one unexpected cost triggers a crisis. The project lives in a state of perpetual financial anxiety that corrupts every strategic decision.</p>
+              <div class="pattern-symptoms">
+                <span class="pattern-symptom">Cash flow anxiety affects every decision</span>
+                <span class="pattern-symptom">No financial runway or reserve</span>
+                <span class="pattern-symptom">Revenue concentration in 1–2 sources</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pattern-card reveal">
+            <div class="pattern-num-large">05</div>
+            <div class="pattern-body">
+              <h3>Scale Trap</h3>
+              <p>The structure that worked brilliantly at 8 people is actively failing at 25. The informal systems, relational trust, and founder-as-central-hub model that built the early success is now the primary barrier to growth.</p>
+              <div class="pattern-symptoms">
+                <span class="pattern-symptom">What worked before no longer scales</span>
+                <span class="pattern-symptom">New hires confused by unwritten rules</span>
+                <span class="pattern-symptom">Coordination costs growing faster than revenue</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pattern-card reveal">
+            <div class="pattern-num-large">06</div>
+            <div class="pattern-body">
+              <h3>Wrong-Fit Team</h3>
+              <p>Key team members are misaligned with either the mission, the required skills, or the current phase of the project. They may be loyal, well-intentioned, and hard-working — but they are in the wrong seats, and nobody wants to have that conversation.</p>
+              <div class="pattern-symptoms">
+                <span class="pattern-symptom">Capability gaps tolerated too long</span>
+                <span class="pattern-symptom">Role descriptions don't match actual work</span>
+                <span class="pattern-symptom">Founder carrying work that belongs to team</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pattern-card reveal">
+            <div class="pattern-num-large">07</div>
+            <div class="pattern-body">
+              <h3>Conflict Avoidance</h3>
+              <p>The team has developed a collective habit of not naming the real tensions — between values, between people, between the vision and the current reality. Surface harmony is preserved at the cost of structural integrity. The real conversations happen in the parking lot, not the meeting room.</p>
+              <div class="pattern-symptoms">
+                <span class="pattern-symptom">Disagreements resolved through withdrawal not dialogue</span>
+                <span class="pattern-symptom">Same issues resurface every quarter</span>
+                <span class="pattern-symptom">Trust eroding without visible cause</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /patterns list -->
+
+        <!-- Severity Scale -->
+        <div class="severity-banner reveal" style="margin-top:var(--sp-12)">
+          <h3 style="font-size:var(--text-2xl);font-weight:800;margin-bottom:var(--sp-3)">
+            Your Collapse Risk Score
+          </h3>
+          <p style="color:var(--muted);font-size:var(--text-base)">
+            The diagnostic helps you score which patterns are active in your project.
+            Here's how to interpret your score:
+          </p>
+          <div class="severity-grid">
+            <div class="severity-item severity-item--yellow">
+              <span class="severity-num">1</span>
+              <strong style="display:block;margin-bottom:var(--sp-2)">Active Pattern</strong>
+              <p style="color:var(--muted);font-size:var(--text-xs)">Early warning signal. Address it before it compounds.</p>
+            </div>
+            <div class="severity-item severity-item--orange">
+              <span class="severity-num">2–3</span>
+              <strong style="display:block;margin-bottom:var(--sp-2)">High Risk</strong>
+              <p style="color:var(--muted);font-size:var(--text-xs)">Multiple active patterns. These are compounding each other right now.</p>
+            </div>
+            <div class="severity-item severity-item--red">
+              <span class="severity-num">4+</span>
+              <strong style="display:block;margin-bottom:var(--sp-2)">Critical</strong>
+              <p style="color:var(--muted);font-size:var(--text-xs)">Structural collapse is not a risk — it is in process. This requires immediate action.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bridge to the Path -->
+        <div style="padding:var(--sp-10);background:linear-gradient(135deg,rgba(10,110,255,0.08),rgba(0,198,255,0.04));border:1px solid rgba(10,110,255,0.2);border-radius:var(--r-xl);margin-top:var(--sp-8)" class="reveal">
+          <div class="section-label">What Comes Next</div>
+          <h3 style="font-size:var(--text-3xl);font-weight:900;margin-bottom:var(--sp-4)">
+            Naming the Pattern Is Step One.<br>
+            <span class="text-gradient">The Path Is What Fixes It.</span>
+          </h3>
+          <p style="color:var(--muted);font-size:var(--text-lg);margin-bottom:var(--sp-6);line-height:1.75">
+            The diagnostic tells you what's breaking. The QuickLaunch Regenerative Systems Path™
+            installs the structure that stops it. Every pattern above has a precise structural
+            solution — and the Path walks you through it in sequence.
+          </p>
+          <div class="gap-cta">
+            <a href="the-path.html" class="btn btn-blue">See the Full Path</a>
+            <a href="apply.html" class="btn btn-secondary">Book a Fit Call</a>
+          </div>
+        </div>
+      </div><!-- /left column -->
+
+      <!-- RIGHT: Opt-in Form (sticky) -->
+      <div class="diag-form-sticky reveal-right" id="get-diagnostic">
+        <div class="diag-form-card">
+          <!-- Book Cover Placeholder -->
+          <div class="diag-book-cover">
+            <div class="diag-book-cover-placeholder" aria-label="7 Collapse Patterns Guide cover">
+              <span class="book-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+              <span class="book-title">The 7 Collapse Patterns Diagnostic</span>
+              <span class="book-sub">QuickLaunch Consulting</span>
+            </div>
+            <div class="free-badge-large" aria-hidden="true">FREE</div>
+          </div>
+
+          <h3 style="font-size:var(--text-2xl);font-weight:900;text-align:center;margin-bottom:var(--sp-2)">
+            Get the Free Guide
+          </h3>
+          <p style="color:var(--muted);text-align:center;font-size:var(--text-sm);margin-bottom:var(--sp-6)">
+            Know exactly which pattern is active in your project — before it gets worse.
+          </p>
+
+          <!-- What you get -->
+          <ul style="list-style:none;margin-bottom:var(--sp-6);display:flex;flex-direction:column;gap:var(--sp-2)">
+            <li style="display:flex;gap:var(--sp-3);font-size:var(--text-sm);color:var(--muted);align-items:flex-start">
+              <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+              All 7 collapse patterns — named clearly with real examples
+            </li>
+            <li style="display:flex;gap:var(--sp-3);font-size:var(--text-sm);color:var(--muted);align-items:flex-start">
+              <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+              Self-assessment: which patterns are active right now
+            </li>
+            <li style="display:flex;gap:var(--sp-3);font-size:var(--text-sm);color:var(--muted);align-items:flex-start">
+              <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+              Severity scoring with precise urgency levels
+            </li>
+            <li style="display:flex;gap:var(--sp-3);font-size:var(--text-sm);color:var(--muted);align-items:flex-start">
+              <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+              Next steps matched to your specific risk profile
+            </li>
+          </ul>
+
+          <form id="diagnostic-form" action="https://formspree.io/f/xlgokpwp" method="POST"
+                aria-label="Download free diagnostic">
+            <input type="hidden" name="_subject" value="New Collapse Diagnostic Download">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <div class="form-field" style="margin-bottom:var(--sp-3)">
+              <label for="diag-fname">First Name</label>
+              <input type="text" id="diag-fname" name="first_name" placeholder="Your first name" required autocomplete="given-name">
+            </div>
+            <div class="form-field" style="margin-bottom:var(--sp-3)">
+              <label for="diag-email">Email Address</label>
+              <input type="email" id="diag-email" name="email" placeholder="Your best email" required autocomplete="email">
+            </div>
+
+            <div class="form-field" style="margin-bottom:var(--sp-6)">
+              <label for="diag-role">Your Role</label>
+              <select id="diag-role" name="role" style="background:rgba(255,255,255,0.06);border:1px solid var(--border-2);border-radius:var(--r-sm);padding:var(--sp-4);color:var(--white);font-size:var(--text-base);width:100%">
+                <option value="" style="background:var(--navy-2)">Select your role...</option>
+                <option value="Founder / CEO" style="background:var(--navy-2)">Founder / CEO</option>
+                <option value="Fractional COO / Operator" style="background:var(--navy-2)">Fractional COO / Operator</option>
+                <option value="Community / Project Leader" style="background:var(--navy-2)">Community / Project Leader</option>
+                <option value="Coach / Consultant" style="background:var(--navy-2)">Coach / Consultant</option>
+                <option value="Product / Tech Lead" style="background:var(--navy-2)">Product / Tech Lead</option>
+                <option value="Other" style="background:var(--navy-2)">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%">
+              Send Me the Diagnostic →
+            </button>
+            <p class="form-disclaimer" style="margin-top:var(--sp-3)">
+              No spam. Structural clarity only. Unsubscribe anytime.
+            </p>
+          </form>
+          <div id="diagnostic-success" class="form-success">
+            <strong style="display:block;font-size:var(--text-lg);margin-bottom:var(--sp-3)">
+              ✓ On its way to your inbox.
+            </strong>
+            <p style="color:var(--muted);font-size:var(--text-sm);margin-bottom:var(--sp-4)">
+              While you wait — if you scored 2+ active patterns, book a free fit call
+              and we'll map the fastest path to structural repair.
+            </p>
+            <a href="apply.html#fit-call" class="btn btn-primary btn-sm" style="display:inline-flex">
+              Book a Free Fit Call →
+            </a>
+          </div>
+
+          <!-- Social proof micro -->
+          <div style="margin-top:var(--sp-6);padding-top:var(--sp-6);border-top:1px solid var(--border);text-align:center">
+            <p style="font-size:var(--text-xs);color:var(--muted-2)">
+              Used by founders and project leaders worldwide.<br>
+              Also powers the StopTheCollapse.com diagnostic.
+            </p>
+          </div>
+        </div><!-- /form card -->
+
+        <!-- Secondary CTA below form -->
+        <div style="margin-top:var(--sp-4);text-align:center">
+          <p style="font-size:var(--text-sm);color:var(--muted);margin-bottom:var(--sp-3)">
+            Already know your pattern?
+          </p>
+          <a href="apply.html" class="btn btn-secondary btn-sm">
+            Skip ahead — Book a Fit Call
+          </a>
+        </div>
+      </div><!-- /right sticky -->
+
+    </div><!-- /diag-layout -->
+  </div>
+</section>
+
+<!-- FAQ (short) -->
+<section class="section--tight section--dark-2" aria-labelledby="diag-faq-heading">
+  <div class="container" style="max-width:760px">
+    <div class="text-center reveal" style="margin-bottom:var(--sp-8)">
+      <h2 style="font-size:var(--text-3xl);font-weight:900" id="diag-faq-heading">
+        Quick Questions
+      </h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          Is this actually free? What's the catch?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <p>Yes, completely free. The catch: you'll understand your structural situation so clearly that you may feel urgently motivated to do something about it. The diagnostic is designed to create problem-awareness, not to sell you anything. If you want help fixing what you find, QuickLaunch is available — but there's no obligation whatsoever.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          I came from StopTheCollapse.com. Is this the same thing?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <p>The 7 Collapse Patterns are the same framework. This version is the QuickLaunch edition — it includes the patterns, the scoring rubric, and the precise next steps based on your profile, specifically framed around the QuickLaunch Path as the structural solution. If you've already done the StopTheCollapse diagnostic, bring your results to the fit call instead of starting over.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          How do I use this with my team?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <p>The most powerful use is to have every core team member score independently — then compare results. When people score different patterns as active, you've just identified a perception gap that's likely causing real friction. When everyone scores the same pattern, you've just aligned on the problem. Either outcome is more useful than another planning meeting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta-section" aria-labelledby="diag-cta-heading">
+  <div class="final-cta-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="final-cta-inner text-center">
+      <h2 class="final-cta-h2 reveal" id="diag-cta-heading">
+        Ready to Fix What<br>
+        <span class="text-gradient">the Diagnostic Reveals?</span>
+      </h2>
+      <p class="final-cta-sub reveal reveal-delay-1">
+        The diagnostic names it. The Path fixes it. One fit call tells you exactly
+        which phase applies to your situation — and what it would take to resolve it.
+      </p>
+      <div class="gap-cta-center reveal reveal-delay-2">
+        <a href="apply.html#fit-call" class="btn btn-primary btn-xl">Book a Free Fit Call</a>
+        <a href="the-path.html" class="btn btn-secondary btn-xl">See the Full Path</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-text">Quick<span>Launch</span> Consulting</div>
+        <p>AI-Powered Systems for founders who want clarity, traction, and execution.</p>
+      </div>
+      <div class="footer-col">
+        <h4>The Path</h4>
+        <a href="the-path.html#phase1">Phase 1: Purpose</a>
+        <a href="the-path.html#phase2">Phase 2: MVP</a>
+        <a href="the-path.html#phase3">Phase 3: Execution</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#who">Who It's For</a>
+        <a href="apply.html">Apply Now</a>
+        <a href="apply.html#fit-call">Book Fit Call</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ecosystem</h4>
+        <a href="https://stopthecollapse.com" target="_blank" rel="noopener">StopTheCollapse.com</a>
+        <a href="index.html#about">About Rick</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 QuickLaunch Consulting. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

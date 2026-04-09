@@ -1,0 +1,8 @@
+https://quicklaunchconsulting.com/ -O "C:/Users/rbroi/My Drive/RickBroider.com/Projects/QuickLaunch Consulting/Website/mirror" +*quicklaunchconsulting.com/* -*quicklaunchconsulting.com/blog* -*quicklaunchconsulting.com/*/blog* -*quicklaunchconsulting.com/category/* -*quicklaunchconsulting.com/tag/* -*quicklaunchconsulting.com/?p=* -v
+File generated automatically on Thu, 09 Apr 2026 04:34:06, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

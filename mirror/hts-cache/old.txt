@@ -1,0 +1,3 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+04:33:54	0/0	---MC-	301	error ('Moved%20Permanently')	text/html	etag:6978a616c585d03cb5b542a891995efb	http://quicklaunchconsulting.com/robots.txt		(from )
+04:33:54	0/0	---MC-	301	error ('Moved%20Permanently')	text/html	etag:e3f801d239b98833d6bc47662352587a	http://quicklaunchconsulting.com/	C:/Users/rbroi/My%20Drive/RickBroider.com/Projects/QuickLaunch%20Consulting/Website/mirror/quicklaunchconsulting.com/index.html	(from )

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Full Path Breakdown — QuickLaunch Regenerative Systems Path™</title>
+  <meta name="description" content="Detailed breakdown of all 3 phases plus optional add-on: Purpose Workshop, MVP Accelerator, Execution Architecture Sprint, and Market Expansion Engine. Every session, every deliverable, every decision gate.">
+  <link rel="canonical" href="https://quicklaunchconsulting.com/the-path.html">
+  <meta property="og:title" content="The QuickLaunch Path — Full Breakdown">
+  <meta property="og:description" content="Every phase, every session, every deliverable. A deliberate sequence for founders who want clarity, proof, and execution without chaos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Page-specific styles */
+    .path-hero {
+      padding: 140px 0 var(--sp-20);
+      position: relative; overflow: hidden;
+      background:
+        radial-gradient(ellipse 70% 60% at 20% 40%, rgba(10,110,255,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 50% at 80% 60%, rgba(255,107,43,0.1) 0%, transparent 50%),
+        var(--navy);
+    }
+    .path-hero-grid {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 0%, transparent 75%);
+    }
+    .phase-detail {
+      padding: var(--sp-24) 0;
+      scroll-margin-top: 80px;
+    }
+    .phase-detail + .phase-detail {
+      border-top: 1px solid var(--border);
+    }
+    .phase-detail-header {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--sp-8);
+      margin-bottom: var(--sp-12);
+    }
+    @media (min-width: 1024px) {
+      .phase-detail-header { grid-template-columns: 1fr 1fr; align-items: center; }
+    }
+    .phase-big-num {
+      font-family: var(--font-h);
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-weight: 900; line-height: 1;
+      opacity: 0.06;
+      position: absolute;
+      top: -20px; right: var(--sp-8);
+      pointer-events: none;
+    }
+    .phase-detail-left { position: relative; }
+    .phase-detail-visual {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--navy-3);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: var(--sp-4);
+    }
+    .phase-visual-icon {
+      width: 88px; height: 88px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(10,110,255,0.1); border: 1px solid rgba(10,110,255,0.2);
+      border-radius: 20px; color: var(--blue-2);
+    }
+    .phase-detail-visual p { color: var(--muted); font-size: var(--text-sm); text-align: center; padding: 0 var(--sp-6); }
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--sp-4);
+      margin: var(--sp-8) 0;
+    }
+    @media (min-width: 640px) { .deliverables-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1024px) { .deliverables-grid { grid-template-columns: repeat(3, 1fr); } }
+    .deliverable-card {
+      padding: var(--sp-6);
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      transition: var(--t-base);
+    }
+    .deliverable-card:hover {
+      background: var(--glass-2);
+      border-color: rgba(10,110,255,0.2);
+      transform: translateY(-3px);
+    }
+    .deliverable-card strong {
+      display: block; margin-bottom: var(--sp-2);
+      font-size: var(--text-base);
+    }
+    .deliverable-card p {
+      color: var(--muted); font-size: var(--text-sm); line-height: 1.6;
+    }
+    .session-block {
+      padding: var(--sp-8);
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      margin-bottom: var(--sp-6);
+    }
+    .session-block-header {
+      display: flex; align-items: center; gap: var(--sp-4);
+      margin-bottom: var(--sp-4);
+    }
+    .session-num {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--grad-blue);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-h); font-size: var(--text-sm); font-weight: 800;
+      flex-shrink: 0;
+    }
+    .session-block h4 { font-size: var(--text-lg); font-weight: 800; }
+    .session-block .duration {
+      font-size: var(--text-xs); color: var(--muted); margin-bottom: var(--sp-4);
+      padding: var(--sp-1) var(--sp-3);
+      background: rgba(255,255,255,0.05);
+      border-radius: var(--r-pill); display: inline-block;
+    }
+    .session-outputs {
+      display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-top: var(--sp-4);
+    }
+    .session-output-chip {
+      padding: var(--sp-2) var(--sp-3);
+      background: rgba(10,110,255,0.1); border: 1px solid rgba(10,110,255,0.2);
+      border-radius: var(--r-pill); font-size: var(--text-xs); color: var(--blue-2); font-weight: 600;
+    }
+    .evidence-window {
+      padding: var(--sp-8);
+      background: rgba(245,166,35,0.06);
+      border: 1px solid rgba(245,166,35,0.2);
+      border-radius: var(--r-lg);
+      margin-bottom: var(--sp-6);
+    }
+    .evidence-window h4 {
+      color: var(--gold); font-size: var(--text-lg); margin-bottom: var(--sp-2);
+    }
+    .evidence-window p { color: var(--muted); font-size: var(--text-sm); line-height: 1.7; }
+    .decision-gate-box {
+      padding: var(--sp-8);
+      background: rgba(34,197,94,0.05);
+      border: 1px solid rgba(34,197,94,0.2);
+      border-left: 4px solid var(--green);
+      border-radius: var(--r-md);
+      margin: var(--sp-8) 0;
+    }
+    .decision-gate-box h4 { color: #86EFAC; font-size: var(--text-lg); margin-bottom: var(--sp-3); }
+    .decision-gate-box ul { list-style: none; }
+    .decision-gate-box ul li {
+      display: flex; align-items: flex-start; gap: var(--sp-3);
+      padding: var(--sp-2) 0; color: var(--muted); font-size: var(--text-sm);
+    }
+    .decision-gate-box ul li::before { content: '✓'; color: var(--green); flex-shrink: 0; }
+    .toc-bar {
+      display: flex; gap: var(--sp-3); flex-wrap: wrap;
+      padding: var(--sp-4) 0; border-bottom: 1px solid var(--border);
+      margin-bottom: var(--sp-8);
+    }
+    .toc-link {
+      padding: var(--sp-2) var(--sp-4);
+      background: var(--glass); border: 1px solid var(--border);
+      border-radius: var(--r-pill); font-size: var(--text-sm); font-weight: 600;
+      color: var(--muted); transition: var(--t-fast);
+    }
+    .toc-link:hover { color: var(--white); border-color: var(--border-2); }
+    .toc-link.active { background: rgba(10,110,255,0.1); border-color: rgba(10,110,255,0.3); color: var(--blue-2); }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="QuickLaunch Home">
+      <span class="nav-logo-text">Quick<span>Launch</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#who">Who It's For</a>
+      <a href="diagnostic.html">Free Diagnostic</a>
+      <a href="apply.html" class="btn btn-primary btn-sm">Book Fit Call</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#who">Who It's For</a>
+  <a href="diagnostic.html">Free Diagnostic</a>
+  <a href="apply.html" class="btn btn-primary btn-lg">Book Fit Call</a>
+</div>
+
+<!-- HERO -->
+<section class="path-hero" aria-label="The Path — Hero">
+  <div class="path-hero-grid" aria-hidden="true"></div>
+  <div class="container">
+    <div style="max-width:860px">
+      <div class="section-label reveal">The Full Breakdown</div>
+      <h1 class="reveal reveal-delay-1" style="font-size:var(--text-6xl);font-weight:900;line-height:1.1;margin-bottom:var(--sp-6)">
+        The QuickLaunch<br>
+        <span class="text-gradient">Regenerative Systems Path™</span>
+      </h1>
+      <p class="reveal reveal-delay-2" style="font-size:var(--text-xl);color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:var(--sp-8)">
+        Every phase. Every session. Every deliverable. Every decision gate.
+        This is not a menu of services — it is a deliberate sequence that
+        addresses the specific failure points that cause most serious projects to stall or collapse.
+      </p>
+      <div class="toc-bar reveal reveal-delay-3" role="navigation" aria-label="Page sections">
+        <a href="#phase1" class="toc-link">Phase 1: Purpose</a>
+        <a href="#phase2" class="toc-link">Phase 2: MVP</a>
+        <a href="#phase3" class="toc-link">Phase 3: Execution</a>
+        <a href="#phase4" class="toc-link">Add-On: Growth</a>
+        <a href="#timeline" class="toc-link">Full Timeline</a>
+        <a href="apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW THE PATH WORKS -->
+<section class="section section--dark-2" aria-labelledby="how-heading">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:var(--sp-10)">
+      <div class="section-label">The Logic</div>
+      <h2 class="section-h2" id="how-heading">
+        Why the Sequence <span class="text-gradient">Matters</span>
+      </h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr;gap:var(--sp-4);max-width:960px;margin:0 auto">
+      <div style="display:grid;grid-template-columns:1fr;gap:var(--sp-4)" class="reveal">
+        <div style="padding:var(--sp-6);background:var(--glass);border:1px solid var(--border);border-radius:var(--r-md)">
+          <strong style="color:var(--orange);display:block;margin-bottom:var(--sp-2)">Why Phase 1 must come first:</strong>
+          <p style="color:var(--muted)">Most projects fail not because the idea is wrong but because the purpose is vague. Without a decision-grade purpose, every downstream decision is contested. You can't validate an offer you haven't clearly defined. You can't build a team structure around a mission nobody agrees on.</p>
+        </div>
+        <div style="padding:var(--sp-6);background:var(--glass);border:1px solid var(--border);border-radius:var(--r-md)">
+          <strong style="color:var(--orange);display:block;margin-bottom:var(--sp-2)">Why Phase 2 must come before building:</strong>
+          <p style="color:var(--muted)">The most expensive mistake in any project is building before proving. Phase 2 proves demand with actual market evidence — not surveys, not assumptions, not enthusiasm. Real conversations. Real presale signals. Real go/no-go decisions backed by data.</p>
+        </div>
+        <div style="padding:var(--sp-6);background:var(--glass);border:1px solid var(--border);border-radius:var(--r-md)">
+          <strong style="color:var(--orange);display:block;margin-bottom:var(--sp-2)">Why Phase 3 determines whether anything gets delivered:</strong>
+          <p style="color:var(--muted)">Most projects have a purpose and a validated idea but no operating container to execute from. Phase 3 installs the structure — roles, decision rights, and phased plans — that allows the validated MVP to be built and delivered without friction, confusion, or founder bottleneck.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PHASE 1 ═══ -->
+<section class="phase-detail section--dark" id="phase1" aria-labelledby="phase1-heading">
+  <div class="container">
+    <div class="phase-detail-header">
+      <div class="phase-detail-left reveal-left">
+        <div class="phase-big-num" aria-hidden="true">01</div>
+        <div class="section-label">Phase 1</div>
+        <h2 id="phase1-heading" style="font-size:var(--text-5xl);font-weight:900;line-height:1.1;margin-bottom:var(--sp-4)">
+          Regenerative<br>
+          <span class="text-gradient">Purpose Workshop™</span>
+        </h2>
+        <p style="font-size:var(--text-xl);color:var(--orange-2);font-style:italic;margin-bottom:var(--sp-6)">
+          Where confused brilliance becomes coherent signal.
+        </p>
+        <p style="color:var(--muted);font-size:var(--text-lg);line-height:1.75;margin-bottom:var(--sp-4)">
+          This phase brings your key stakeholders into a structured live session that produces
+          a single decision-grade purpose the entire team can actually operate from.
+        </p>
+        <p style="color:var(--muted);font-size:var(--text-lg);line-height:1.75;margin-bottom:var(--sp-8)">
+          You do not leave with inspiration. You leave with a documented source of truth,
+          clear guardrails, alignment (or documented disagreement with resolution owners),
+          and the exact next step mapped.
+        </p>
+        <div style="display:flex;gap:var(--sp-4);flex-wrap:wrap">
+          <div style="padding:var(--sp-3) var(--sp-5);background:rgba(10,110,255,0.1);border:1px solid rgba(10,110,255,0.2);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:600;color:var(--blue-2)">
+            2.5–3 hours live
+          </div>
+          <div style="padding:var(--sp-3) var(--sp-5);background:rgba(10,110,255,0.1);border:1px solid rgba(10,110,255,0.2);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:600;color:var(--blue-2)">
+            Deliverables within 72hrs
+          </div>
+          <div style="padding:var(--sp-3) var(--sp-5);background:rgba(10,110,255,0.1);border:1px solid rgba(10,110,255,0.2);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:600;color:var(--blue-2)">
+            3–30 stakeholders
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="phase-detail-visual">
+          <div class="phase-visual-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+          <p>Phase 1 Visual: Purpose Workshop<br><small>See image-prompts.txt for Canva prompt</small></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Session Agenda -->
+    <div class="reveal">
+      <h3 style="font-size:var(--text-2xl);font-weight:800;margin-bottom:var(--sp-6)">Session Agenda</h3>
+      <div style="display:grid;grid-template-columns:1fr;gap:var(--sp-3)">
+        <div class="session-block">
+          <div style="font-size:var(--text-sm);color:var(--muted);margin-bottom:var(--sp-4)">2.5–3 Hours · Google Meet + Miro Journey Board</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--sp-3)">
+            <div style="padding:var(--sp-3);background:rgba(255,255,255,0.03);border-radius:var(--r-sm);border:1px solid var(--border)">
+              <strong style="font-size:var(--text-sm)">Runway &amp; Norms (10 min)</strong>
+            </div>
+            <div style="padding:var(--sp-3);background:rgba(255,255,255,0.03);border-radius:var(--r-sm);border:1px solid var(--border)">
+              <strong style="font-size:var(--text-sm)">Solo Extraction (20 min)</strong>
+            </div>
+            <div style="padding:var(--sp-3);background:rgba(255,255,255,0.03);border-radius:var(--r-sm);border:1px solid var(--border)">
+              <strong style="font-size:var(--text-sm)">Cluster &amp; Vote (20 min)</strong>
+            </div>
+            <div style="padding:var(--sp-3);background:rgba(255,255,255,0.03);border-radius:var(--r-sm);border:1px solid var(--border)">
+              <strong style="font-size:var(--text-sm)">Purpose Statement Forge (30 min)</strong>
+            </div>
+            <div style="padding:var(--sp-3);background:rgba(255,255,255,0.03);border-radius:var(--r-sm);border:1px solid var(--border)">
+              <strong style="font-size:var(--text-sm)">Stress Test &amp; Non-Goals (30 min)</strong>
+            </div>
+            <div style="padding:var(--sp-3);background:rgba(255,255,255,0.03);border-radius:var(--r-sm);border:1px solid var(--border)">
+              <strong style="font-size:var(--text-sm)">Disagreement Map if Needed (20 min)</strong>
+            </div>
+            <div style="padding:var(--sp-3);background:rgba(255,255,255,0.03);border-radius:var(--r-sm);border:1px solid var(--border)">
+              <strong style="font-size:var(--text-sm)">Decisions &amp; Commitments (15 min)</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deliverables -->
+    <div class="reveal" style="margin-top:var(--sp-10)">
+      <h3 style="font-size:var(--text-2xl);font-weight:800;margin-bottom:var(--sp-6)">
+        What You Receive (Within 24–72 Hours)
+      </h3>
+      <div class="deliverables-grid">
+        <div class="deliverable-card">
+          <strong>Purpose Findings &amp; Recommendations Report</strong>
+          <p>Your full governing source of truth — decision-grade, shareable, and permanent. The document your team references before every major decision.</p>
+        </div>
+        <div class="deliverable-card">
+          <strong>One-Page Purpose Snapshot</strong>
+          <p>The condensed version for stakeholders, investors, and partners. Everything essential on a single page.</p>
+        </div>
+        <div class="deliverable-card">
+          <strong>Defined Dream Target</strong>
+          <p>One specific ideal client/participant — with their 2am problem stated in their own language, not yours.</p>
+        </div>
+        <div class="deliverable-card">
+          <strong>Before → After Transformation</strong>
+          <p>The precise change your work creates, stated in market language that converts — not internal language that inspires.</p>
+        </div>
+        <div class="deliverable-card">
+          <strong>Unique Mechanism</strong>
+          <p>What makes your approach credible and differentiated. Stated plainly — no jargon, no vague promises.</p>
+        </div>
+        <div class="deliverable-card">
+          <strong>Decision Rules + Scope Guardrails</strong>
+          <p>The non-goals and boundaries that prevent drift, scope creep, and distraction under pressure.</p>
+        </div>
+        <div class="deliverable-card">
+          <strong>Stakeholder Alignment Record</strong>
+          <p>Either documented agreement across all key stakeholders, or a clear disagreement map with named resolution owners.</p>
+        </div>
+        <div class="deliverable-card">
+          <strong>Recommended MVP Seed</strong>
+          <p>The specific first thing to validate in Phase 2 — based on your purpose, your market, and the real demand signals available to you.</p>
+        </div>
+        <div class="deliverable-card">
+          <strong>Phase 2 Readiness Gate + Next Steps</strong>
+          <p>A clear assessment of whether you're ready to enter Phase 2, and exactly what needs to happen before you do.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decision Gate -->
+    <div class="decision-gate-box reveal">
+      <h4>🟢 Decision Gate A: Purpose Lock</h4>
+      <p style="color:var(--muted);margin-bottom:var(--sp-4)">Move forward to Phase 2 only when all four criteria are met:</p>
+      <ul>
+        <li>Purpose statement is decision-grade: specific Dream Target, real pain, clear transformation</li>
+        <li>A single primary 2am problem is chosen — not three, not a category</li>
+        <li>Non-goals and scope guardrails are written and accepted</li>
+        <li>Stakeholder alignment is achieved, or disagreements are clearly documented with resolution owners</li>
+      </ul>
+      <p style="color:var(--muted);margin-top:var(--sp-4);font-size:var(--text-sm)">
+        <strong style="color:var(--white)">If gate is not met:</strong> A 60-minute Purpose Refinement Mini-Sprint is scheduled before Phase 2 begins. No extra charge.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PHASE 2 ═══ -->
+<section class="phase-detail section--dark-2" id="phase2" aria-labelledby="phase2-heading">
+  <div class="container">
+    <div class="phase-detail-header">
+      <div class="phase-detail-left reveal-left">
+        <div class="phase-big-num" aria-hidden="true">02</div>
+        <div class="section-label">Phase 2</div>
+        <h2 id="phase2-heading" style="font-size:var(--text-5xl);font-weight:900;line-height:1.1;margin-bottom:var(--sp-4)">
+          MVP<br>
+          <span class="text-gradient">Accelerator™</span>
+        </h2>
+        <p style="font-size:var(--text-xl);color:var(--orange-2);font-style:italic;margin-bottom:var(--sp-6)">
+          Where intention becomes something real people will pay for.
+        </p>
+        <p style="color:var(--muted);font-size:var(--text-lg);line-height:1.75;margin-bottom:var(--sp-4)">
+          MVP stands for <strong style="color:var(--white)">Minimal Viable Path</strong> — not minimum viable product.
+          This phase tests your validated purpose in the real market before you build anything expensive or complex.
+        </p>
+        <p style="color:var(--muted);font-size:var(--text-lg);line-height:1.75;margin-bottom:var(--sp-8)">
+          The goal is evidence, not execution. You prove demand first.
+          Then — and only then — you define the smallest version that reliably
+          delivers the transformation you've committed to.
+        </p>
+        <div style="display:flex;gap:var(--sp-4);flex-wrap:wrap">
+          <div style="padding:var(--sp-3) var(--sp-5);background:rgba(10,110,255,0.1);border:1px solid rgba(10,110,255,0.2);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:600;color:var(--blue-2)">
+            3 sessions × 90 min
+          </div>
+          <div style="padding:var(--sp-3) var(--sp-5);background:rgba(10,110,255,0.1);border:1px solid rgba(10,110,255,0.2);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:600;color:var(--blue-2)">
+            1–3 weeks
+          </div>
+          <div style="padding:var(--sp-3) var(--sp-5);background:rgba(10,110,255,0.1);border:1px solid rgba(10,110,255,0.2);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:600;color:var(--blue-2)">
+            Async support between sessions
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="phase-detail-visual">
+          <div class="phase-visual-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg></div>
+          <p>Phase 2 Visual: MVP Accelerator<br><small>See image-prompts.txt for Canva prompt</small></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sessions -->
+    <div class="reveal">
+      <h3 style="font-size:var(--text-2xl);font-weight:800;margin-bottom:var(--sp-6)">The 3-Session Sequence</h3>
+
+      <div class="session-block">
+        <div class="session-block-header">
+          <div class="session-num">S1</div>
+          <div>
+            <h4>Session 1: Market Ignition &amp; Hooks</h4>
+            <span class="duration">90 minutes</span>
+          </div>
+        </div>
+        <p style="color:var(--muted);margin-bottom:var(--sp-4)">Build the targeting, messaging, and outreach system to generate real market signal.</p>
+        <div class="session-outputs">
+          <span class="session-output-chip">Micro-pockets map</span>
+          <span class="session-output-chip">Top 3 hooks</span>
+          <span class="session-output-chip">10 awakening posts</span>
+          <span class="session-output-chip">Outreach scripts</span>
+          <span class="session-output-chip">Outreach tracker</span>
+        </div>
+      </div>
+
+      <div class="evidence-window">
+        <h4>Evidence Window 1 (3–7 Days Between Sessions)</h4>
+        <p>Your job: 25 ethical outreaches, 5–10 real conversations, 1 partner invitation attempt, collection of real objection and language data. This is where most programs skip the uncomfortable work. We don't.</p>
+      </div>
+
+      <div class="decision-gate-box">
+        <h4>Decision Gate B: Signal Check</h4>
+        <ul>
+          <li>Real replies and conversations are happening with the right people</li>
+          <li>The pain language is resonating — people are nodding, not politely listening</li>
+          <li>At least a few people ask "how do I do this?" or "what's next?"</li>
+        </ul>
+        <p style="color:var(--muted);margin-top:var(--sp-3);font-size:var(--text-sm)">
+          <strong style="color:var(--white)">If gate not met:</strong> Revise hooks and target pockets. Rerun the evidence window. Do not proceed until signal is real.
+        </p>
+      </div>
+
+      <div class="session-block">
+        <div class="session-block-header">
+          <div class="session-num">S2</div>
+          <div>
+            <h4>Session 2: Presale Validation</h4>
+            <span class="duration">90 minutes</span>
+          </div>
+        </div>
+        <p style="color:var(--muted);margin-bottom:var(--sp-4)">Build the validation infrastructure to convert interest into actual commitments.</p>
+        <div class="session-outputs">
+          <span class="session-output-chip">Promise page draft</span>
+          <span class="session-output-chip">Micro-webinar outline</span>
+          <span class="session-output-chip">Fit call script</span>
+          <span class="session-output-chip">Presale offer sheet</span>
+          <span class="session-output-chip">Proof thresholds</span>
+          <span class="session-output-chip">Stop rules</span>
+        </div>
+      </div>
+
+      <div class="evidence-window">
+        <h4>Presale Window (7–14 Days Between Sessions)</h4>
+        <p>Your job: run 1 micro-webinar, conduct 5–12 fit calls, pursue presale commitments or deposits, invite MVP Council prospects. This is where you find out if people will actually pay — before you build anything.</p>
+      </div>
+
+      <div class="decision-gate-box">
+        <h4>🟢 Decision Gate C: Presale Threshold</h4>
+        <ul>
+          <li>Presale commitments hit the agreed threshold (defined in Session 2)</li>
+          <li>Or clear demand signals show a simple pivot will convert</li>
+        </ul>
+        <p style="color:var(--muted);margin-top:var(--sp-3);font-size:var(--text-sm)">
+          <strong style="color:var(--white)">If gate not met:</strong> Pause the build. Adjust the offer or pivot to the first-win version. We do not build on unproven ground.
+        </p>
+      </div>
+
+      <div class="session-block">
+        <div class="session-block-header">
+          <div class="session-num">S3</div>
+          <div>
+            <h4>Session 3: MVP Council &amp; Blueprint Forge</h4>
+            <span class="duration">90 minutes</span>
+          </div>
+        </div>
+        <p style="color:var(--muted);margin-bottom:var(--sp-4)">Translate validated demand into a fully scoped, buildable roadmap.</p>
+        <div class="session-outputs">
+          <span class="session-output-chip">MVP Council plan</span>
+          <span class="session-output-chip">QuickLaunch MVP Blueprint</span>
+          <span class="session-output-chip">Build sprint backlog</span>
+          <span class="session-output-chip">Onboarding plan</span>
+          <span class="session-output-chip">Phase 3 handoff pack</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PHASE 3 ═══ -->
+<section class="phase-detail section--dark" id="phase3" aria-labelledby="phase3-heading">
+  <div class="container">
+    <div class="phase-detail-header">
+      <div class="phase-detail-left reveal-left">
+        <div class="phase-big-num" aria-hidden="true">03</div>
+        <div class="section-label">Phase 3</div>
+        <h2 id="phase3-heading" style="font-size:var(--text-5xl);font-weight:900;line-height:1.1;margin-bottom:var(--sp-4)">
+          Execution Architecture<br>
+          <span class="text-gradient">Sprint™</span>
+        </h2>
+        <p style="font-size:var(--text-xl);color:var(--orange-2);font-style:italic;margin-bottom:var(--sp-6)">
+          Where plans stop stalling and execution becomes inevitable.
+        </p>
+        <p style="color:var(--muted);font-size:var(--text-lg);line-height:1.75;margin-bottom:var(--sp-4)">
+          This phase creates the operating container that allows your validated MVP to be
+          delivered without friction, confusion, or founder bottleneck.
+        </p>
+        <p style="color:var(--muted);font-size:var(--text-lg);line-height:1.75;margin-bottom:var(--sp-8)">
+          Roles are clarified. Decision rights are defined. Execution is phased realistically.
+          This is where strategy stops being theoretical and becomes operational.
+        </p>
+        <div style="display:flex;gap:var(--sp-4);flex-wrap:wrap">
+          <div style="padding:var(--sp-3) var(--sp-5);background:rgba(255,107,43,0.1);border:1px solid rgba(255,107,43,0.2);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:600;color:var(--orange-2)">
+            2 sessions × 2 hours
+          </div>
+          <div style="padding:var(--sp-3) var(--sp-5);background:rgba(255,107,43,0.1);border:1px solid rgba(255,107,43,0.2);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:600;color:var(--orange-2)">
+            1 week
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="phase-detail-visual">
+          <div class="phase-visual-icon" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange)"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <p>Phase 3 Visual: Execution Architecture<br><small>See image-prompts.txt for Canva prompt</small></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 style="font-size:var(--text-2xl);font-weight:800;margin-bottom:var(--sp-6)">The 2-Session Sprint</h3>
+
+      <div class="session-block">
+        <div class="session-block-header">
+          <div class="session-num" style="background:var(--grad-orange)">S1</div>
+          <div>
+            <h4>Session 1: Charter &amp; Role Architecture</h4>
+            <span class="duration">120 minutes</span>
+          </div>
+        </div>
+        <div class="session-outputs">
+          <span class="session-output-chip" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange-2)">Anchor Circle scope &amp; boundaries</span>
+          <span class="session-output-chip" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange-2)">Charter draft</span>
+          <span class="session-output-chip" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange-2)">Role map &amp; missing roles</span>
+          <span class="session-output-chip" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange-2)">Decision rights framework</span>
+        </div>
+      </div>
+
+      <div class="decision-gate-box">
+        <h4>🟢 Decision Gate D: Execution Container Ready</h4>
+        <ul>
+          <li>Roles have named owners or a hiring/coverage plan exists</li>
+          <li>Decision rights are explicit — no ambiguity about who decides what</li>
+          <li>Meeting cadence is chosen and genuinely realistic for your team's capacity</li>
+        </ul>
+      </div>
+
+      <div class="session-block">
+        <div class="session-block-header">
+          <div class="session-num" style="background:var(--grad-orange)">S2</div>
+          <div>
+            <h4>Session 2: Phased Implementation Plan &amp; Cadence</h4>
+            <span class="duration">120 minutes</span>
+          </div>
+        </div>
+        <div class="session-outputs">
+          <span class="session-output-chip" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange-2)">Implementation phases map</span>
+          <span class="session-output-chip" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange-2)">Phase 1 setup sprint backlog</span>
+          <span class="session-output-chip" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange-2)">Ownership matrix</span>
+          <span class="session-output-chip" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange-2)">Risk register</span>
+          <span class="session-output-chip" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange-2)">Comms protocols</span>
+          <span class="session-output-chip" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange-2)">Metrics loop</span>
+          <span class="session-output-chip" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange-2)">Next dates locked</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ OPTIONAL ADD-ON ═══ -->
+<section class="phase-detail section--dark-2" id="phase4" aria-labelledby="phase4-heading">
+  <div class="container">
+    <div style="max-width:860px;margin:0 auto">
+      <div style="display:inline-flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.3);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:700;color:var(--gold);margin-bottom:var(--sp-6)" class="reveal">
+        // Optional Add-On — Available After Phase 3
+      </div>
+      <div class="section-label reveal">Add-On</div>
+      <h2 id="phase4-heading" class="reveal reveal-delay-1" style="font-size:var(--text-5xl);font-weight:900;line-height:1.1;margin-bottom:var(--sp-4)">
+        Market Expansion<br>
+        <span class="text-gradient-orange">Engine™</span>
+      </h2>
+      <p class="reveal reveal-delay-2" style="font-size:var(--text-xl);color:var(--orange-2);font-style:italic;margin-bottom:var(--sp-6)">
+        The bridge into retainers, long-term builds, and platform plays.
+      </p>
+      <p class="reveal" style="color:var(--muted);font-size:var(--text-lg);line-height:1.75;margin-bottom:var(--sp-8)">
+        This phase is not required to complete the core path — and it should not be started
+        before execution is genuinely stable. This is not scaling chaos. It is scaling systems
+        that already work. Available only when Decision Gate E criteria are met.
+      </p>
+
+      <div class="decision-gate-box reveal" style="background:rgba(245,166,35,0.05);border-color:rgba(245,166,35,0.2);border-left-color:var(--gold)">
+        <h4 style="color:var(--gold)">Decision Gate E: Growth Readiness</h4>
+        <ul>
+          <li>Delivery is stable — the MVP is running and delivering the promised transformation</li>
+          <li>Onboarding works — new participants/clients move through it without confusion</li>
+          <li>Early proof exists — real testimonials, results, case studies</li>
+          <li>The team has capacity to run and sustain a growth cadence</li>
+        </ul>
+      </div>
+
+      <div class="reveal" style="margin-top:var(--sp-8)">
+        <h3 style="font-size:var(--text-2xl);font-weight:800;margin-bottom:var(--sp-6)">3-Session Growth Sequence</h3>
+        <div style="display:grid;grid-template-columns:1fr;gap:var(--sp-4)">
+          <div class="session-block">
+            <div class="session-block-header">
+              <div class="session-num" style="background:var(--grad-orange)">S1</div>
+              <div><h4>Channels &amp; Messaging</h4><span class="duration">90 minutes</span></div>
+            </div>
+            <p style="color:var(--muted);font-size:var(--text-sm)">Define the growth channels that match your audience, your capacity, and your credibility. Build the messaging that converts at scale without chasing algorithms.</p>
+          </div>
+          <div class="session-block">
+            <div class="session-block-header">
+              <div class="session-num" style="background:var(--grad-orange)">S2</div>
+              <div><h4>Funnel Light + Nurture + Retention Loops</h4><span class="duration">90 minutes</span></div>
+            </div>
+            <p style="color:var(--muted);font-size:var(--text-sm)">Build the micro-community penetration strategy, referral systems, and retention architecture that generates compounding growth without advertising dependency.</p>
+          </div>
+          <div class="session-block">
+            <div class="session-block-header">
+              <div class="session-num" style="background:var(--grad-orange)">S3</div>
+              <div><h4>30-Day Sprint + Dashboard + Scale Triggers</h4><span class="duration">90 minutes</span></div>
+            </div>
+            <p style="color:var(--muted);font-size:var(--text-sm)">The execution sprint backlog, growth dashboard, and scale trigger thresholds that signal when it's time to hire, expand, or move into retained strategic partnership.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FULL TIMELINE ═══ -->
+<section class="section section--dark" id="timeline" aria-labelledby="timeline-heading">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:var(--sp-12)">
+      <div class="section-label">Full Timeline</div>
+      <h2 class="section-h2" id="timeline-heading">
+        From Day Zero to<br><span class="text-gradient">Full Execution Capacity</span>
+      </h2>
+    </div>
+    <div style="max-width:760px;margin:0 auto">
+      <div style="display:grid;grid-template-columns:80px 1fr;gap:var(--sp-4)">
+        <!-- Pre-program -->
+        <div style="text-align:center;padding-top:var(--sp-2)" class="reveal">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--navy-3);border:2px solid var(--border-2);display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:var(--text-sm);font-weight:700">T-7</div>
+          <div style="width:2px;background:var(--border);height:calc(100% - 40px);margin:8px auto 0"></div>
+        </div>
+        <div class="reveal" style="padding-bottom:var(--sp-8)">
+          <strong style="display:block;margin-bottom:var(--sp-2)">Pre-Program (T-7 to T-1)</strong>
+          <p style="color:var(--muted);font-size:var(--text-sm)">Booking confirmation · Intake form · Stakeholder confirmations · Miro access · "What to expect" briefing</p>
+        </div>
+        <!-- Phase 1 -->
+        <div style="text-align:center;padding-top:var(--sp-2)" class="reveal">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--grad-blue);display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:var(--text-sm);font-weight:800">01</div>
+          <div style="width:2px;background:linear-gradient(180deg,var(--blue),transparent);height:calc(100% - 40px);margin:8px auto 0"></div>
+        </div>
+        <div class="reveal" style="padding-bottom:var(--sp-8)">
+          <strong style="display:block;margin-bottom:var(--sp-2)">Phase 1: Purpose Workshop (Day 1)</strong>
+          <p style="color:var(--muted);font-size:var(--text-sm)">2.5–3 hour live session · Deliverables within 72hrs · Decision Gate A</p>
+        </div>
+        <!-- Phase 2 -->
+        <div style="text-align:center;padding-top:var(--sp-2)" class="reveal">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--orange));display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:var(--text-sm);font-weight:800">02</div>
+          <div style="width:2px;background:linear-gradient(180deg,var(--orange),transparent);height:calc(100% - 40px);margin:8px auto 0"></div>
+        </div>
+        <div class="reveal" style="padding-bottom:var(--sp-8)">
+          <strong style="display:block;margin-bottom:var(--sp-2)">Phase 2: MVP Accelerator (Days 3–24)</strong>
+          <p style="color:var(--muted);font-size:var(--text-sm)">3 sessions × 90 min + two evidence/presale windows · Decision Gates B &amp; C</p>
+        </div>
+        <!-- Phase 3 -->
+        <div style="text-align:center;padding-top:var(--sp-2)" class="reveal">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--grad-orange);display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:var(--text-sm);font-weight:800">03</div>
+          <div style="width:2px;background:var(--border);height:calc(100% - 40px);margin:8px auto 0"></div>
+        </div>
+        <div class="reveal" style="padding-bottom:var(--sp-8)">
+          <strong style="display:block;margin-bottom:var(--sp-2)">Phase 3: Execution Sprint (Days 25–35)</strong>
+          <p style="color:var(--muted);font-size:var(--text-sm)">2 sessions × 2 hrs · Full charter, roles, implementation plan · Decision Gate D</p>
+        </div>
+        <!-- Optional -->
+        <div style="text-align:center;padding-top:var(--sp-2)" class="reveal">
+          <div style="width:40px;height:40px;border-radius:50%;background:rgba(245,166,35,0.2);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:var(--text-xs);font-weight:800;color:var(--gold)">+</div>
+        </div>
+        <div class="reveal">
+          <strong style="display:block;margin-bottom:var(--sp-2);color:var(--gold)">Optional Add-On: Market Expansion (When Ready)</strong>
+          <p style="color:var(--muted);font-size:var(--text-sm)">3 sessions × 90 min · Growth architecture · Retained partnership bridge · Decision Gate E required</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="final-cta-section" aria-labelledby="path-cta-heading">
+  <div class="final-cta-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="final-cta-inner text-center">
+      <h2 class="final-cta-h2 reveal" id="path-cta-heading">
+        Ready to Start the Path?<br>
+        <span class="text-gradient">One Fit Call Changes Everything.</span>
+      </h2>
+      <p class="final-cta-sub reveal reveal-delay-1">
+        The fit call is free, 15–20 minutes, and ends with a clear prescription —
+        whether that includes us or not.
+      </p>
+      <div class="gap-cta-center reveal reveal-delay-2">
+        <a href="apply.html" class="btn btn-primary btn-xl">Apply for the Path</a>
+        <a href="apply.html#fit-call" class="btn btn-secondary btn-xl">Book a Free Fit Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-text">Quick<span>Launch</span> Consulting</div>
+        <p>AI-Powered Systems for founders who want clarity, traction, and execution.</p>
+      </div>
+      <div class="footer-col">
+        <h4>The Path</h4>
+        <a href="#phase1">Phase 1: Purpose</a>
+        <a href="#phase2">Phase 2: MVP</a>
+        <a href="#phase3">Phase 3: Execution</a>
+        <a href="#phase4">Add-On: Growth</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#who">Who It's For</a>
+        <a href="diagnostic.html">Free Diagnostic</a>
+        <a href="apply.html">Apply Now</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ecosystem</h4>
+        <a href="https://stopthecollapse.com" target="_blank" rel="noopener">StopTheCollapse.com</a>
+        <a href="index.html#about">About Rick</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 QuickLaunch Consulting. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

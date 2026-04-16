@@ -224,7 +224,10 @@
 <nav id="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-container">
     <a href="index.html" class="nav-logo" aria-label="QuickLaunch Consulting Home">
-      <img src="assets/images/quicklaunch-logo-rect.png" alt="QuickLaunch" class="nav-logo-lockup" width="220" height="57">
+      <span class="nav-logo-wordmark">
+        <span class="nav-logo-quick">Quick</span><span class="nav-logo-launch">Launch</span>
+      </span>
+      <span class="nav-logo-rocket" aria-hidden="true">🚀</span>
     </a>
     <div class="nav-links" id="nav-links">
       <a href="#path">The Path</a>
@@ -267,24 +270,14 @@
           The QuickLaunch Regenerative Systems Path™
         </div>
         <h1 class="hero-h1 reveal reveal-delay-1">
-          <span class="hero-line">Your Vision Deserves</span>
-          <span class="hero-line"><span class="text-gradient">Structure</span> That</span>
-          <span class="hero-line">Can <em>Survive.</em></span>
+          <span class="hero-line">Your Vision</span>
+          <span class="hero-line">Needs <span class="text-gradient">Structure</span></span>
+          <span class="hero-line">That <em>Survives Reality.</em></span>
         </h1>
         <p class="hero-body reveal reveal-delay-2">
-          QuickLaunch turns stalled founder momentum into a working operating system:
-          clarity, proof, and execution without the chaos spiral.
-          <strong style="color:var(--white)"> From clarity → validation → implementation.</strong>
+          QuickLaunch turns founder pressure into operating structure:
+          clear decisions, proof before overbuild, and execution that does not keep routing back through you.
         </p>
-        <div class="hero-ctas reveal reveal-delay-3">
-          <a href="apply.html" class="btn btn-primary btn-lg">
-            Begin the Path
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="diagnostic.html" class="btn btn-secondary btn-lg">
-            Get the Free Diagnostic
-          </a>
-        </div>
         <p class="hero-proofline reveal reveal-delay-3">
           Built for founders, fractional leaders, and mission-driven teams who need traction to become structure.
         </p>
@@ -302,20 +295,44 @@
             <span>Deliverable-Backed</span>
           </div>
         </div>
-        <p class="hero-meta reveal reveal-delay-4" style="font-size:var(--text-xs);color:var(--muted-2);margin-top:var(--sp-4);line-height:1.5">
-          Used by founders, fractional leaders, and mission-driven teams across industries and continents.
+        <p class="hero-secondary-link reveal reveal-delay-4">
+          Prefer to talk first?
+          <a href="apply.html">Book a fit call.</a>
         </p>
       </div>
-      <div class="hero-visual reveal-right" aria-hidden="true">
-        <div class="hero-visual-frame">
-          <img src="assets/images/hero-architecture-canva.jpg"
-               alt=""
-               width="960" height="960" loading="eager"
-               class="hero-system-art">
-          <div class="hero-visual-caption">
-            <span class="hero-visual-kicker">What the path installs</span>
-            <strong>Aligned decisions. Visible momentum. Less founder drag.</strong>
-          </div>
+      <div class="hero-offer reveal-right">
+        <div class="hero-offer-card">
+          <div class="hero-offer-kicker">Free Diagnostic</div>
+          <h2 class="hero-offer-title">Get the 7 Collapse Patterns Diagnostic</h2>
+          <p class="hero-offer-body">
+            The fastest way to name what is stalling your project and see the next structural move.
+          </p>
+          <ul class="hero-offer-points">
+            <li>3-minute self-assessment</li>
+            <li>Names the active pattern fast</li>
+            <li>Redirects straight into the quiz after submit</li>
+          </ul>
+          <form
+            id="hero-lead-form"
+            action="https://formspree.io/f/myklewwl"
+            method="POST"
+            data-success-redirect="diagnostic.html#quiz"
+            aria-label="Get the free diagnostic">
+            <div class="form-field" style="margin-bottom:var(--sp-3)">
+              <label for="hero-fname">First Name</label>
+              <input type="text" id="hero-fname" name="first_name" placeholder="Your first name" required autocomplete="given-name">
+            </div>
+            <div class="form-field" style="margin-bottom:var(--sp-4)">
+              <label for="hero-email">Email Address</label>
+              <input type="email" id="hero-email" name="email" placeholder="Your best email" required autocomplete="email">
+            </div>
+            <input type="hidden" name="_subject" value="New QuickLaunch Hero Diagnostic Request">
+            <input type="text" name="_gotcha" style="display:none">
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%">
+              Get Instant Access
+            </button>
+            <p class="form-disclaimer">No spam. No fluff. Just structural clarity.</p>
+          </form>
         </div>
       </div>
     </div>
@@ -857,7 +874,6 @@
             </div>
           </div>
           <input type="hidden" name="_subject" value="New QuickLaunch Diagnostic Request">
-          <input type="hidden" name="_next" value="https://agent5d-369.github.io/QuickLaunch/diagnostic.html#quiz">
           <input type="text" name="_gotcha" style="display:none">
           <button type="submit" class="btn btn-primary btn-lg" style="width:100%">
             Send Me the Diagnostic →

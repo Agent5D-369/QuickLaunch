@@ -353,6 +353,44 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
 @media (min-width: 1024px) {
   .hero-inner { grid-template-columns: minmax(0, 540px) minmax(0, 1fr); gap: var(--sp-16); }
 }
+@media (min-width: 1024px) {
+  .hero {
+    padding: 104px 0 var(--sp-12);
+  }
+  .hero-h1 {
+    font-size: clamp(3.8rem, 5.8vw, 5.5rem);
+    line-height: 0.94;
+    margin-bottom: var(--sp-4);
+  }
+  .hero-body {
+    font-size: 1.02rem;
+    margin-bottom: var(--sp-4);
+    line-height: 1.5;
+  }
+  .hero-ctas {
+    margin-bottom: var(--sp-4);
+  }
+  .hero-proofline {
+    margin-bottom: var(--sp-4);
+    font-size: 0.84rem;
+  }
+  .hero-stats {
+    padding-top: var(--sp-4);
+    gap: var(--sp-3);
+  }
+  .hero-stat strong {
+    font-size: 1.85rem;
+  }
+  .hero-meta {
+    display: none;
+  }
+  .hero-visual {
+    width: min(100%, 540px);
+  }
+  .hero-visual-caption strong {
+    font-size: 1.35rem;
+  }
+}
 
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: var(--sp-2);

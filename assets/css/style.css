@@ -351,7 +351,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   gap: var(--sp-10); align-items: center;
 }
 @media (min-width: 1024px) {
-  .hero-inner { grid-template-columns: minmax(0, 560px) minmax(380px, 480px); gap: var(--sp-10); }
+  .hero-inner { grid-template-columns: minmax(0, 500px) minmax(400px, 500px); gap: var(--sp-12); }
   }
 @media (min-width: 1024px) {
   .hero {
@@ -361,13 +361,13 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 560px;
+    max-width: 500px;
   }
   .hero-h1 {
-    font-size: clamp(3.1rem, 4.8vw, 4.7rem);
-    line-height: 0.9;
+    font-size: clamp(2.9rem, 4.25vw, 4.2rem);
+    line-height: 0.92;
     margin-bottom: var(--sp-3);
-    max-width: 10ch;
+    max-width: 8.5ch;
   }
   .hero-line {
     display: block;
@@ -399,11 +399,12 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
     display: none;
   }
   .hero-visual {
-    width: min(100%, 500px);
-    align-self: end;
+    width: min(100%, 460px);
+    align-self: start;
     justify-self: end;
     position: relative;
     z-index: 1;
+    margin-top: 3.5rem;
   }
   .hero-visual-caption strong {
     font-size: 1.15rem;
@@ -451,8 +452,9 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
     line-height: 1.2;
   }
   .hero-visual {
-    width: min(100%, 400px);
+    width: min(100%, 380px);
     justify-self: end;
+    margin-top: 2.5rem;
   }
   .hero-visual-caption {
     left: var(--sp-4);

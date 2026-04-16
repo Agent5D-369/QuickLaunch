@@ -191,6 +191,7 @@
       if (!btn) return;
 
       const originalText = btn.textContent;
+      const successRedirect = form.dataset.successRedirect;
       btn.textContent = 'Sending...';
       btn.disabled    = true;
 
@@ -203,6 +204,10 @@
         });
 
         if (res.ok) {
+          if (successRedirect) {
+            window.location.href = successRedirect;
+            return;
+          }
           form.style.display   = 'none';
           if (successEl) successEl.classList.add('show');
         } else {
@@ -214,6 +219,79 @@
         btn.disabled    = false;
       }
     });
+  });
+})();
+
+// DIAGNOSTIC QUIZ SCORING
+(function initDiagnosticQuiz() {
+  const quiz = document.getElementById('diagnostic-quiz');
+  if (!quiz) return;
+
+  const result = document.getElementById('quiz-result');
+  const resultScore = document.getElementById('quiz-result-score');
+  const resultLevel = document.getElementById('quiz-result-level');
+  const resultCopy = document.getElementById('quiz-result-copy');
+  const resultPatterns = document.getElementById('quiz-result-patterns');
+  const resultCta = document.getElementById('quiz-result-cta');
+
+  if (!result || !resultScore || !resultLevel || !resultCopy || !resultPatterns || !resultCta) return;
+
+  const patternLabels = {
+    governance_shadow: 'Governance Shadow',
+    vision_drift: 'Vision Drift',
+    founder_bottleneck: 'Founder Bottleneck',
+    financial_fragility: 'Financial Fragility',
+    scale_trap: 'Scale Trap',
+    wrong_fit_team: 'Wrong-Fit Team',
+    conflict_avoidance: 'Conflict Avoidance'
+  };
+
+  quiz.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const data = new FormData(quiz);
+    const activePatterns = [];
+    let score = 0;
+
+    Object.entries(patternLabels).forEach(([key, label]) => {
+      const answer = data.get(key);
+      if (answer === 'yes') {
+        score += 1;
+        activePatterns.push(label);
+      } else if (answer === 'somewhat') {
+        score += 0.5;
+      }
+    });
+
+    const roundedScore = Math.max(activePatterns.length, Math.round(score));
+    let level = 'Early Warning';
+    let copy = 'You likely have one visible structural pressure point. Catch it now and you can repair it before it becomes a momentum killer.';
+    let ctaLabel = 'See the Full Path';
+    let ctaHref = 'the-path.html';
+
+    if (roundedScore >= 4) {
+      level = 'Critical';
+      copy = 'Multiple collapse patterns look active at once. This is less of a small leak and more of a systems-level strain that deserves immediate structural repair.';
+      ctaLabel = 'Book a Fit Call';
+      ctaHref = 'apply.html#fit-call';
+    } else if (roundedScore >= 2) {
+      level = 'High Risk';
+      copy = 'You have compounding issues, not isolated friction. The good news is the pattern is now nameable, and that makes it fixable.';
+      ctaLabel = 'Book a Fit Call';
+      ctaHref = 'apply.html#fit-call';
+    }
+
+    resultScore.textContent = roundedScore.toString();
+    resultLevel.textContent = level;
+    resultCopy.textContent = copy;
+    resultPatterns.innerHTML = activePatterns.length
+      ? activePatterns.map((pattern) => `<li>${pattern}</li>`).join('')
+      : '<li>No clear dominant pattern flagged yet. If the project still feels shaky, start with the Path to strengthen structure before strain compounds.</li>';
+    resultCta.textContent = ctaLabel;
+    resultCta.setAttribute('href', ctaHref);
+
+    result.classList.add('show');
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 })();
 

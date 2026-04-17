@@ -14,6 +14,13 @@
 - Fractional COO Consultant: https://quicklaunchconsulting.com/fractional-coo-consultant.html
 - AI Business Consultant: https://quicklaunchconsulting.com/ai-business-consultant.html
 
+## Editorial Guides
+- Founder Bottleneck: https://quicklaunchconsulting.com/founder-bottleneck.html
+- How to Validate an MVP: https://quicklaunchconsulting.com/how-to-validate-an-mvp.html
+- Why Startups Fail Before Product-Market Fit: https://quicklaunchconsulting.com/why-startups-fail-before-product-market-fit.html
+- Decision Rights for Founder-Led Teams: https://quicklaunchconsulting.com/decision-rights-for-founder-led-teams.html
+- Stakeholder Alignment Workshop: https://quicklaunchconsulting.com/stakeholder-alignment-workshop.html
+
 ## Access Notes
 - The public site invites visitors to request diagnostic access from the homepage.
 - The diagnostic quiz itself is intentionally gated and not part of the public search surface.

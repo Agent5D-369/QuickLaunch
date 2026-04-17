@@ -18,6 +18,13 @@ MVP Validation Consultant: https://quicklaunchconsulting.com/mvp-validation-cons
 Fractional COO Consultant: https://quicklaunchconsulting.com/fractional-coo-consultant.html
 AI Business Consultant: https://quicklaunchconsulting.com/ai-business-consultant.html
 
+/* EDITORIAL GUIDES */
+Founder Bottleneck: https://quicklaunchconsulting.com/founder-bottleneck.html
+How to Validate an MVP: https://quicklaunchconsulting.com/how-to-validate-an-mvp.html
+Why Startups Fail Before Product-Market Fit: https://quicklaunchconsulting.com/why-startups-fail-before-product-market-fit.html
+Decision Rights for Founder-Led Teams: https://quicklaunchconsulting.com/decision-rights-for-founder-led-teams.html
+Stakeholder Alignment Workshop: https://quicklaunchconsulting.com/stakeholder-alignment-workshop.html
+
 /* NOTES */
 The public site is intentionally conversion-focused.
 The diagnostic quiz is access-gated from the homepage rather than fully public.

@@ -14,6 +14,9 @@
 - `decision-rights-for-founder-led-teams.html`
 - `stakeholder-alignment-workshop.html`
 
+Status:
+- live
+
 ## Internal Linking Rules
 - Homepage links to all commercial intent pages.
 - Each intent page links to at least 3 sibling intent pages.

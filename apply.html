@@ -136,6 +136,8 @@
     }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
+    .apply-context-panel { display: none; }
+    .apply-context-panel.active { display: block; }
     .fit-call-intro-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -219,7 +221,7 @@
   <a href="index.html">Home</a>
   <a href="the-path.html">The Path</a>
   <a href="index.html#diagnostic-access">Get Diagnostic Access</a>
-  <a href="apply.html" class="btn btn-primary btn-lg">Apply Now</a>
+  <a href="apply.html#apply-path" class="btn btn-primary btn-lg">Apply Now</a>
 </div>
 
 <!-- HERO -->
@@ -246,67 +248,116 @@
 
       <!-- SIDEBAR -->
       <aside class="apply-sidebar reveal-left">
-        <div class="section-label">Why Apply</div>
-        <h2 id="apply-heading" style="font-size:var(--text-3xl);font-weight:900;margin-bottom:var(--sp-8)">
-          This Call Is Different.<br>
-          <span class="text-gradient">Here's Why.</span>
-        </h2>
+        <div id="context-full" class="apply-context-panel active">
+          <div class="section-label">Why Apply</div>
+          <h2 id="apply-heading" style="font-size:var(--text-3xl);font-weight:900;margin-bottom:var(--sp-8)">
+            This Path Starts With<br>
+            <span class="text-gradient">Useful Signal.</span>
+          </h2>
 
-        <div class="urgency-bar">
-          <strong>Limited availability.</strong> We work with a small number of clients at one time to maintain quality. Apply to confirm availability.
+          <div class="urgency-bar">
+            <strong>Limited availability.</strong> We work with a small number of active Path clients at one time, so the application confirms fit, urgency, and starting point.
+          </div>
+
+          <div style="margin-bottom:var(--sp-8)">
+            <div class="trust-sidebar-item">
+              <div class="trust-sidebar-icon trust-sidebar-icon--blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+              <div class="trust-sidebar-text">
+                <strong>We identify the real starting phase</strong>
+                <p>You do not need to guess whether you need clarity, validation, or execution structure first.</p>
+              </div>
+            </div>
+            <div class="trust-sidebar-item">
+              <div class="trust-sidebar-icon trust-sidebar-icon--orange"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div class="trust-sidebar-text">
+                <strong>Short application, clear next step</strong>
+                <p>Four minutes now saves a lot of back-and-forth later. We reply with the right recommendation, not generic scheduling noise.</p>
+              </div>
+            </div>
+            <div class="trust-sidebar-item">
+              <div class="trust-sidebar-icon trust-sidebar-icon--green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+              <div class="trust-sidebar-text">
+                <strong>Decision gates stay intact</strong>
+                <p>Every phase ends at a real gate. You are not pushed into work that your project is not ready for.</p>
+              </div>
+            </div>
+            <div class="trust-sidebar-item">
+              <div class="trust-sidebar-icon trust-sidebar-icon--blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+              <div class="trust-sidebar-text">
+                <strong>Honest fit over forced fit</strong>
+                <p>If a fit call should happen before a Path application, we will tell you that. If something else is a better route, we will say that too.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding:var(--sp-6);background:var(--glass);border:1px solid var(--border);border-radius:var(--r-lg)">
+            <div style="color:var(--gold);margin-bottom:var(--sp-3)">★★★★★</div>
+            <blockquote style="font-style:italic;color:var(--white);font-size:var(--text-base);line-height:1.7;margin-bottom:var(--sp-4)">
+              "The application forced me to name the real bottleneck clearly enough that the next conversation was immediately useful. We skipped weeks of vague setup."
+            </blockquote>
+            <div style="font-size:var(--text-sm);color:var(--muted)">Founder, early-stage services venture</div>
+          </div>
         </div>
 
-        <div style="margin-bottom:var(--sp-8)">
-          <div class="trust-sidebar-item">
-            <div class="trust-sidebar-icon trust-sidebar-icon--blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-            <div class="trust-sidebar-text">
-              <strong>This is a diagnosis, not a pitch</strong>
-              <p>You leave the fit call with a sharper understanding of your real constraint - whether we work together or not.</p>
-            </div>
-          </div>
-          <div class="trust-sidebar-item">
-            <div class="trust-sidebar-icon trust-sidebar-icon--orange"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-            <div class="trust-sidebar-text">
-              <strong>15–20 minutes only</strong>
-              <p>Structured, focused, and respectful of your time. No marathon discovery call. No unpaid strategy session.</p>
-            </div>
-          </div>
-          <div class="trust-sidebar-item">
-            <div class="trust-sidebar-icon trust-sidebar-icon--green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-            <div class="trust-sidebar-text">
-              <strong>The Decision Gate Guarantee</strong>
-              <p>Every phase ends at a real gate. You never pay for phase 2 until phase 1 is genuinely complete.</p>
-            </div>
-          </div>
-          <div class="trust-sidebar-item">
-            <div class="trust-sidebar-icon trust-sidebar-icon--blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-            <div class="trust-sidebar-text">
-              <strong>Honest fit assessment</strong>
-              <p>If we're not the right fit for your situation, we'll tell you - and point you toward what is.</p>
-            </div>
-          </div>
-        </div>
+        <div id="context-fit" class="apply-context-panel">
+          <div class="section-label">Why Book</div>
+          <h2 style="font-size:var(--text-3xl);font-weight:900;margin-bottom:var(--sp-8)">
+            This Call Is Different.<br>
+            <span class="text-gradient">Here's Why.</span>
+          </h2>
 
-        <!-- Testimonial snippet -->
-        <div style="padding:var(--sp-6);background:var(--glass);border:1px solid var(--border);border-radius:var(--r-lg)">
-          <div style="color:var(--gold);margin-bottom:var(--sp-3)">★★★★★</div>
-          <blockquote style="font-style:italic;color:var(--white);font-size:var(--text-base);line-height:1.7;margin-bottom:var(--sp-4)">
-            "The fit call was the most useful 20 minutes I'd spent in six months of spinning.
-            I walked away knowing exactly what my real problem was - which turned out to be
-            something completely different from what I thought it was."
-          </blockquote>
-          <div style="font-size:var(--text-sm);color:var(--muted)">Jordan West · Founder, Mission-Driven Services Co.</div>
-        </div>
+          <div class="urgency-bar">
+            <strong>Fast clarity.</strong> This is the better option if you need diagnosis first, want to ask questions, or are not sure whether the Path is the right move.
+          </div>
 
-        <div style="margin-top:var(--sp-8);padding:var(--sp-5);background:rgba(10,110,255,0.06);border:1px solid rgba(10,110,255,0.15);border-radius:var(--r-md)">
-          <p style="font-size:var(--text-sm);color:var(--muted);margin-bottom:var(--sp-3)">
-            <strong style="color:var(--white)">Came from StopTheCollapse.com?</strong><br>
-            Bring your collapse pattern score to the call - we'll be able to give you a precise
-            prescription in the first 10 minutes.
-          </p>
-          <a href="index.html#diagnostic-access" style="font-size:var(--text-sm);color:var(--blue-2);font-weight:600">
-            Get the free diagnostic first →
-          </a>
+          <div style="margin-bottom:var(--sp-8)">
+            <div class="trust-sidebar-item">
+              <div class="trust-sidebar-icon trust-sidebar-icon--blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+              <div class="trust-sidebar-text">
+                <strong>This is a diagnosis, not a pitch</strong>
+                <p>You leave the fit call with a sharper understanding of your real constraint, whether we work together or not.</p>
+              </div>
+            </div>
+            <div class="trust-sidebar-item">
+              <div class="trust-sidebar-icon trust-sidebar-icon--orange"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div class="trust-sidebar-text">
+                <strong>15–20 minutes only</strong>
+                <p>Structured, focused, and respectful of your time. No marathon discovery call. No unpaid strategy session.</p>
+              </div>
+            </div>
+            <div class="trust-sidebar-item">
+              <div class="trust-sidebar-icon trust-sidebar-icon--green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+              <div class="trust-sidebar-text">
+                <strong>Clear recommendation at the end</strong>
+                <p>You leave knowing whether to apply for the Path, start with a diagnostic, or fix something else first.</p>
+              </div>
+            </div>
+            <div class="trust-sidebar-item">
+              <div class="trust-sidebar-icon trust-sidebar-icon--blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+              <div class="trust-sidebar-text">
+                <strong>Honest fit assessment</strong>
+                <p>If we're not the right fit for your situation, we'll tell you and point you toward what is.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding:var(--sp-6);background:var(--glass);border:1px solid var(--border);border-radius:var(--r-lg)">
+            <div style="color:var(--gold);margin-bottom:var(--sp-3)">★★★★★</div>
+            <blockquote style="font-style:italic;color:var(--white);font-size:var(--text-base);line-height:1.7;margin-bottom:var(--sp-4)">
+              "The fit call was the most useful 20 minutes I'd spent in six months of spinning. I walked away knowing exactly what my real problem was."
+            </blockquote>
+            <div style="font-size:var(--text-sm);color:var(--muted)">Jordan West · Founder, Mission-Driven Services Co.</div>
+          </div>
+
+          <div style="margin-top:var(--sp-8);padding:var(--sp-5);background:rgba(10,110,255,0.06);border:1px solid rgba(10,110,255,0.15);border-radius:var(--r-md)">
+            <p style="font-size:var(--text-sm);color:var(--muted);margin-bottom:var(--sp-3)">
+              <strong style="color:var(--white)">Came from StopTheCollapse.com?</strong><br>
+              Bring your collapse pattern score to the call and we can get precise fast.
+            </p>
+            <a href="index.html#diagnostic-access" style="font-size:var(--text-sm);color:var(--blue-2);font-weight:600">
+              Get diagnostic access first →
+            </a>
+          </div>
         </div>
       </aside>
 
@@ -329,7 +380,7 @@
 
         <!-- TAB: Full Application -->
         <div id="tab-full" class="tab-panel active" role="tabpanel" aria-labelledby="tab-full-btn">
-          <div class="apply-form-card">
+          <div class="apply-form-card" id="apply-path">
             <h3 style="font-size:var(--text-2xl);font-weight:900;margin-bottom:var(--sp-2)">
               Path Application
             </h3>
@@ -677,15 +728,25 @@ function switchTab(tab) {
     b.setAttribute('aria-selected', 'false');
   });
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.apply-context-panel').forEach(p => p.classList.remove('active'));
   document.getElementById('tab-' + tab).classList.add('active');
   document.getElementById('tab-' + tab + '-btn').classList.add('active');
   document.getElementById('tab-' + tab + '-btn').setAttribute('aria-selected', 'true');
+  document.getElementById('context-' + tab).classList.add('active');
+  if (tab === 'fit') {
+    history.replaceState(null, '', '#fit-call');
+  } else {
+    history.replaceState(null, '', '#apply-path');
+  }
 }
 
-// Check URL hash to open fit-call tab directly
+// Check URL hash to open the correct state directly
 if (window.location.hash === '#fit-call') {
   switchTab('fit');
   document.getElementById('fit-call') && document.getElementById('fit-call').scrollIntoView({ behavior: 'smooth', block: 'start' });
+} else if (window.location.hash === '#apply-path') {
+  switchTab('full');
+  document.getElementById('apply-path') && document.getElementById('apply-path').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 </script>
 </body>

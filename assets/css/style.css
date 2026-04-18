@@ -1371,6 +1371,16 @@ footer {
 /* ── SECTION-SPECIFIC OVERRIDES ─────────────────────────────── */
 
 /* The path page full breakdown */
+.form-error {
+  margin-top: var(--sp-4);
+  padding: var(--sp-4) var(--sp-5);
+  border-radius: var(--r-md);
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.22);
+  color: #FCA5A5;
+  font-size: var(--text-sm);
+}
+
 .phase-detail-section {
   scroll-margin-top: 80px;
   padding: var(--sp-20) 0;

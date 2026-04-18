@@ -236,10 +236,30 @@ function hasDiagnosticAccess() {
 (function initForms() {
   const forms = document.querySelectorAll('form[action*="formspree"]');
 
+  function setButtonState(button, text, disabled) {
+    if (!button) return;
+    button.textContent = text;
+    button.disabled = disabled;
+    button.setAttribute('aria-disabled', String(disabled));
+  }
+
+  function getOrCreateErrorEl(form) {
+    let errorEl = form.querySelector('.form-error');
+    if (errorEl) return errorEl;
+
+    errorEl = document.createElement('div');
+    errorEl.className = 'form-error';
+    errorEl.setAttribute('role', 'alert');
+    errorEl.hidden = true;
+    form.appendChild(errorEl);
+    return errorEl;
+  }
+
   forms.forEach(form => {
     const successId = form.id ? form.id.replace('-form', '-success') : null;
     const successEl = successId ? document.getElementById(successId) : null;
     const btn       = form.querySelector('button[type="submit"]');
+    const errorEl   = getOrCreateErrorEl(form);
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -247,8 +267,10 @@ function hasDiagnosticAccess() {
 
       const originalText = btn.textContent;
       const successRedirect = form.dataset.successRedirect;
-      btn.textContent = 'Sending...';
-      btn.disabled    = true;
+      form.setAttribute('aria-busy', 'true');
+      errorEl.hidden = true;
+      errorEl.textContent = '';
+      setButtonState(btn, 'Sending...', true);
 
       try {
         const data = new FormData(form);
@@ -270,15 +292,32 @@ function hasDiagnosticAccess() {
             window.location.href = successRedirect;
             return;
           }
-          form.style.display   = 'none';
-          if (successEl) successEl.classList.add('show');
+          form.reset();
+          form.style.display = 'none';
+          if (successEl) {
+            successEl.classList.add('show');
+            successEl.setAttribute('tabindex', '-1');
+            successEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            successEl.focus({ preventScroll: true });
+          }
         } else {
-          btn.textContent = 'Error - Try Again';
-          btn.disabled    = false;
+          let message = 'Something went wrong. Please check the form and try again.';
+          try {
+            const payload = await res.json();
+            if (payload && Array.isArray(payload.errors) && payload.errors.length) {
+              message = payload.errors.map(error => error.message).join(' ');
+            }
+          } catch {}
+          errorEl.textContent = message;
+          errorEl.hidden = false;
+          setButtonState(btn, originalText, false);
         }
       } catch {
-        btn.textContent = 'Error - Try Again';
-        btn.disabled    = false;
+        errorEl.textContent = 'We could not submit the form right now. Please try again in a moment.';
+        errorEl.hidden = false;
+        setButtonState(btn, originalText, false);
+      } finally {
+        form.setAttribute('aria-busy', 'false');
       }
     });
   });

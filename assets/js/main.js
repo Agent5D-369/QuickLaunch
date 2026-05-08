@@ -274,6 +274,15 @@ function hasDiagnosticAccess() {
 
       try {
         const data = new FormData(form);
+        if (!data.has('form_id') && form.id) {
+          data.append('form_id', form.id);
+        }
+        if (!data.has('page_url')) {
+          data.append('page_url', window.location.href);
+        }
+        if (!data.has('page_title')) {
+          data.append('page_title', document.title);
+        }
         const res  = await fetch(form.action, {
           method: 'POST',
           body: data,

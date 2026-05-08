@@ -370,6 +370,7 @@ function hasDiagnosticAccess() {
   const resultCopy = document.getElementById('quiz-result-copy');
   const resultPatterns = document.getElementById('quiz-result-patterns');
   const resultCta = document.getElementById('quiz-result-cta');
+  const resultSecondaryCta = document.getElementById('quiz-result-secondary-cta');
   const explainer = document.getElementById('diagnostic-explainer');
 
   if (!result || !resultScore || !resultLevel || !resultCopy || !resultPatterns || !resultCta) return;
@@ -427,6 +428,10 @@ function hasDiagnosticAccess() {
       : '<li>No clear dominant pattern flagged yet. If the project still feels shaky, start with the Path to strengthen structure before strain compounds.</li>';
     resultCta.textContent = ctaLabel;
     resultCta.setAttribute('href', ctaHref);
+    if (resultSecondaryCta) {
+      const isDuplicateCta = resultSecondaryCta.getAttribute('href') === ctaHref;
+      resultSecondaryCta.hidden = isDuplicateCta;
+    }
 
     if (explainer) {
       explainer.hidden = false;

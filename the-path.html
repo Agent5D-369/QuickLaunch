@@ -168,6 +168,12 @@
       display: flex; align-items: center; justify-content: center;
       flex-direction: column; gap: var(--sp-4);
     }
+    .phase-detail-visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .phase-visual-icon {
       width: 88px; height: 88px;
       display: flex; align-items: center; justify-content: center;
@@ -277,6 +283,9 @@
     @media (max-width: 639px) {
       .path-hero {
         padding: 118px 0 var(--sp-16);
+      }
+      .phase-detail-visual {
+        aspect-ratio: 5 / 6;
       }
       .toc-bar {
         flex-wrap: nowrap;
@@ -430,8 +439,9 @@
       </div>
       <div class="reveal-right">
         <div class="phase-detail-visual">
-          <div class="phase-visual-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
-          <p>Phase 1 Visual: Purpose Workshop<br><small>See image-prompts.txt for Canva prompt</small></p>
+          <img src="assets/images/path-phase-purpose-workshop.png"
+               alt="Regenerative Purpose Workshop visual showing a collaborative outdoor strategy session around purpose, people, planet, and profit"
+               width="1430" height="1330" loading="lazy">
         </div>
       </div>
     </div>
@@ -511,8 +521,9 @@
       </div>
       <div class="reveal-right">
         <div class="phase-detail-visual">
-          <div class="phase-visual-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg></div>
-          <p>Phase 2 Visual: MVP Accelerator<br><small>See image-prompts.txt for Canva prompt</small></p>
+          <img src="assets/images/path-phase-mvp-accelerator.png"
+               alt="MVP Accelerator visual showing a community around a minimal viable path map focused on real demand, sustainable impact, and financial viability"
+               width="1457" height="1399" loading="lazy">
         </div>
       </div>
     </div>
@@ -586,8 +597,9 @@
       </div>
       <div class="reveal-right">
         <div class="phase-detail-visual">
-          <div class="phase-visual-icon" style="background:rgba(255,107,43,0.1);border-color:rgba(255,107,43,0.2);color:var(--orange)"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-          <p>Phase 3 Visual: Execution Architecture<br><small>See image-prompts.txt for Canva prompt</small></p>
+          <img src="assets/images/path-phase-execution-architecture.png"
+               alt="Execution Architecture Sprint visual showing a planning board, decision-rights framework, phased roadmap, and execution plan in action"
+               width="1457" height="1399" loading="lazy">
         </div>
       </div>
     </div>
@@ -628,48 +640,58 @@
 <!-- ═══ OPTIONAL ADD-ON ═══ -->
 <section class="phase-detail section--dark-2" id="phase4" aria-labelledby="phase4-heading">
   <div class="container">
-    <div style="max-width:860px;margin:0 auto">
-      <div style="display:inline-flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.3);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:700;color:var(--gold);margin-bottom:var(--sp-6)" class="reveal">
-        // Optional Add-On - Available After Phase 3
-      </div>
-      <div class="section-label reveal">Add-On</div>
-      <h2 id="phase4-heading" class="reveal reveal-delay-1" style="font-size:var(--text-5xl);font-weight:900;line-height:1.1;margin-bottom:var(--sp-4)">
-        Market Expansion<br>
-        <span class="text-gradient-orange">Engine™</span>
-      </h2>
-      <p class="reveal reveal-delay-2" style="font-size:var(--text-xl);color:var(--orange-2);font-style:italic;margin-bottom:var(--sp-6)">
-        The bridge into retainers, long-term builds, and platform plays.
-      </p>
-      <p class="reveal" style="color:var(--muted);font-size:var(--text-lg);line-height:1.75;margin-bottom:var(--sp-8)">
-        This phase is not required to complete the core path - and it should not be started
-        before execution is genuinely stable. This is not scaling chaos. It is scaling systems
-        that already work. Available only when Decision Gate E criteria are met.
-      </p>
+    <div class="phase-detail-header">
+      <div class="phase-detail-left reveal-left">
+        <div style="display:inline-flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.3);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:700;color:var(--gold);margin-bottom:var(--sp-6)">
+          // Optional Add-On - Available After Phase 3
+        </div>
+        <div class="section-label">Add-On</div>
+        <h2 id="phase4-heading" style="font-size:var(--text-5xl);font-weight:900;line-height:1.1;margin-bottom:var(--sp-4)">
+          Market Expansion<br>
+          <span class="text-gradient-orange">Engine™</span>
+        </h2>
+        <p style="font-size:var(--text-xl);color:var(--orange-2);font-style:italic;margin-bottom:var(--sp-6)">
+          The bridge into retainers, long-term builds, and platform plays.
+        </p>
+        <p style="color:var(--muted);font-size:var(--text-lg);line-height:1.75;margin-bottom:var(--sp-8)">
+          This phase is not required to complete the core path - and it should not be started
+          before execution is genuinely stable. This is not scaling chaos. It is scaling systems
+          that already work. Available only when Decision Gate E criteria are met.
+        </p>
 
-      <div class="decision-gate-box reveal" style="background:rgba(245,166,35,0.05);border-color:rgba(245,166,35,0.2);border-left-color:var(--gold)">
-        <h4 style="color:var(--gold)">Decision Gate E: Growth Readiness</h4>
-        <ul>
-          <li>Delivery is stable enough to withstand more demand</li>
-          <li>Proof exists in the form of outcomes, trust, or traction</li>
-          <li>The team has enough capacity to grow without breaking the core</li>
-        </ul>
+        <div class="decision-gate-box" style="background:rgba(245,166,35,0.05);border-color:rgba(245,166,35,0.2);border-left-color:var(--gold)">
+          <h4 style="color:var(--gold)">Decision Gate E: Growth Readiness</h4>
+          <ul>
+            <li>Delivery is stable enough to withstand more demand</li>
+            <li>Proof exists in the form of outcomes, trust, or traction</li>
+            <li>First systems run without constant founder direction</li>
+            <li>Team, tools, and infrastructure can scale</li>
+          </ul>
+        </div>
       </div>
+      <div class="reveal-right">
+        <div class="phase-detail-visual">
+          <img src="assets/images/path-phase-market-expansion.png"
+               alt="Market Expansion Engine visual showing proven systems, scalable growth, and new markets connected through a growth-readiness dashboard"
+               width="1456" height="1370" loading="lazy">
+        </div>
+      </div>
+    </div>
 
-      <div class="reveal" style="margin-top:var(--sp-8)">
-        <h3 style="font-size:var(--text-2xl);font-weight:800;margin-bottom:var(--sp-6)">What This Add-On Focuses On</h3>
-        <div class="deliverables-grid">
-          <div class="deliverable-card">
-            <strong>Channel Focus</strong>
-            <p>Choosing the growth channels that fit your audience, credibility, and capacity.</p>
-          </div>
-          <div class="deliverable-card">
-            <strong>Retention Logic</strong>
-            <p>Designing the loops that help growth compound without creating churn or chaos.</p>
-          </div>
-          <div class="deliverable-card">
-            <strong>Scale Triggers</strong>
-            <p>Knowing when to expand, hire, or deepen the operating structure instead of guessing.</p>
-          </div>
+    <div class="reveal">
+      <h3 style="font-size:var(--text-2xl);font-weight:800;margin-bottom:var(--sp-6)">What This Add-On Focuses On</h3>
+      <div class="deliverables-grid">
+        <div class="deliverable-card">
+          <strong>Channel Focus</strong>
+          <p>Choosing the growth channels that fit your audience, credibility, and capacity.</p>
+        </div>
+        <div class="deliverable-card">
+          <strong>Retention Logic</strong>
+          <p>Designing the loops that help growth compound without creating churn or chaos.</p>
+        </div>
+        <div class="deliverable-card">
+          <strong>Scale Triggers</strong>
+          <p>Knowing when to expand, hire, or deepen the operating structure instead of guessing.</p>
         </div>
       </div>
     </div>

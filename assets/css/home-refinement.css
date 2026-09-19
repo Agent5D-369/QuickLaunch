@@ -1,0 +1,151 @@
+/* Hallmark - modern-minimal; existing QuickLaunch palette and typography.
+   Pre-emit critique: P4 H4 E4 S4 R4 V4. */
+.hero-bg-gradient {
+  background: var(--navy-2);
+}
+.hero .orb {
+  display: none;
+}
+.hero-grid {
+  opacity: 0.45;
+}
+
+.text-gradient,
+.text-gradient-orange {
+  background: none;
+  color: inherit;
+  -webkit-text-fill-color: currentColor;
+}
+.hero-h1 .text-gradient,
+.final-cta-h2 .text-gradient {
+  color: var(--orange);
+}
+
+.hero-offer-card {
+  background: var(--navy-3);
+  border-color: var(--border-2);
+  border-radius: var(--r-sm);
+  box-shadow: none;
+}
+.hero-offer-card::before {
+  content: none;
+}
+
+.section-label {
+  display: none;
+}
+.collapse-content .section-label {
+  display: block;
+  color: var(--orange);
+  letter-spacing: 0;
+}
+.collapse-content .section-label::before {
+  content: none;
+}
+
+#truth .truth-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--sp-10);
+  gap: 0 var(--sp-10);
+  counter-reset: problem;
+}
+#truth .truth-card {
+  counter-increment: problem;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  align-items: start;
+  gap: var(--sp-4);
+  min-width: 0;
+  padding: var(--sp-6) 0;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  transition: none;
+}
+#truth .truth-card::before {
+  content: counter(problem, decimal-leading-zero);
+  position: static;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  background: none;
+  color: var(--orange);
+  font-family: var(--font-h);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0;
+  transition: none;
+}
+#truth .truth-icon {
+  display: none;
+}
+#truth .truth-card p {
+  min-width: 0;
+  color: var(--white);
+  font-size: var(--text-lg);
+  font-style: normal;
+  line-height: 1.45;
+}
+#truth .truth-card:hover {
+  background: none;
+  border-color: var(--border-2);
+  transform: none;
+  box-shadow: none;
+}
+
+section:not(.hero) :is(.reveal, .reveal-left, .reveal-right) {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+@media (max-width: 767px) {
+  #truth .truth-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero :is(.reveal, .reveal-right) {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+html,
+body {
+  overflow-x: clip;
+}
+.hero-inner,
+.hero-content,
+.hero-offer {
+  min-width: 0;
+}
+.hero-h1 {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+  .hero-line {
+    display: block;
+    white-space: normal;
+  }
+  .hero-eyebrow {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    letter-spacing: 0.08em;
+  }
+  .hero-actions .btn {
+    flex: 1 1 100%;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero-offer {
+    max-width: 100%;
+  }
+}

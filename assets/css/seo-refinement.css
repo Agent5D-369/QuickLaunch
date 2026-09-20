@@ -14,13 +14,16 @@
 .editorial-band a:focus-visible,.answer-band a:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 .source-note{font-size:var(--text-sm);color:var(--muted);margin-top:var(--sp-8)}
 .answer-band .source-note{color:var(--navy-4)}
+.path-hero-title{font-size:var(--text-6xl)}
 @media(max-width:639px){
+.path-hero-title{font-size:1.75rem}
+.hero-h1--decision{font-size:1.75rem}
 html,body{overflow-x:clip}
 .path-hero-layout,.apply-layout{grid-template-columns:minmax(0,1fr)}
 .path-hero-copy,.path-hero-visual,.apply-layout>*,.apply-layout .reveal-right,.tab-panel,.apply-form-card{min-width:0;max-width:100%}
-.path-hero h1,.path-hero h1 span{overflow-wrap:anywhere;white-space:normal}
+.path-hero-title,.path-hero-title span{overflow-wrap:normal;word-break:normal;white-space:normal}
 .toc-bar,.tab-switcher{max-width:100%}
-.tab-btn{min-width:0;white-space:normal;line-height:1.35}
+.tab-btn{min-width:0;white-space:nowrap;line-height:1.35;padding-inline:var(--sp-2);font-size:var(--text-xs)}
 .apply-form-card{padding:var(--sp-6)}
 }
 @media(max-width:1023px){

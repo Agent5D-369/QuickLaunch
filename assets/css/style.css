@@ -365,6 +365,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   66% { transform: translate(-20px, 30px) scale(0.95); }
 }
 
+.hero-line { display: block; white-space: normal; }
 .hero-inner {
   position: relative; z-index: 1;
   display: grid; grid-template-columns: 1fr;

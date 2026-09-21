@@ -1554,3 +1554,22 @@ footer {
     padding: var(--sp-5);
   }
 }
+
+@media (max-width: 639px) {
+  :root {
+    --text-xs: 0.8125rem;
+    --text-sm: 0.9375rem;
+    --text-base: 1.0625rem;
+  }
+  body { line-height: 1.72; }
+  .hero-body { font-size: var(--text-base); }
+  .hero-stat span { font-size: var(--text-xs); }
+  .hero-offer-body,
+  .hero-offer-points li,
+  .form-disclaimer { font-size: var(--text-sm); }
+  .fit-call-intro-card p,
+  .path-option-desc { font-size: var(--text-sm); }
+  .form-field input,
+  .form-field textarea,
+  .form-field select { font-size: 1rem; }
+}

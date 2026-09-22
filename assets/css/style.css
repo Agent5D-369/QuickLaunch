@@ -1245,6 +1245,9 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
 .faq-item.open .faq-q { background: rgba(10,110,255,0.08); }
 .faq-item.open .faq-icon { transform: rotate(45deg); }
 .faq-a {
+  max-height: none; overflow: visible;
+}
+.faq-item.faq-enhanced .faq-a {
   max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 .faq-a-inner {
@@ -1253,7 +1256,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   background: rgba(255,255,255,0.02);
 }
 .faq-a-inner p { color: var(--muted); font-size: var(--text-base); line-height: 1.75; }
-.faq-item.open .faq-a { max-height: 1200px; }
+.faq-item.faq-enhanced.open .faq-a { max-height: 1200px; }
 
 /* ── FINAL CTA ──────────────────────────────────────────────── */
 .final-cta-section {
@@ -1864,6 +1867,20 @@ section:not(.hero) :is(.reveal, .reveal-left, .reveal-right) {
 }
 
 @media (max-width: 767px) {
+  .faq-item.faq-enhanced .faq-a,
+  .faq-item.faq-enhanced.open .faq-a {
+    max-height: none !important;
+    overflow: visible;
+  }
+
+  .faq-icon {
+    display: none;
+  }
+
+  .faq-q {
+    cursor: default;
+  }
+
   .truth-grid {
     grid-template-columns: minmax(0, 1fr);
   }

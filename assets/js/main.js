@@ -155,6 +155,16 @@ function hasDiagnosticAccess() {
     const ans = item.querySelector('.faq-a');
     if (!btn || !ans) return;
 
+    btn.type = 'button';
+
+    // Mobile-first fallback: answers remain visible and scannable on phones.
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      btn.setAttribute('aria-expanded', 'true');
+      return;
+    }
+
+    item.classList.add('faq-enhanced');
+
     btn.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
 
@@ -162,13 +172,16 @@ function hasDiagnosticAccess() {
       items.forEach(i => {
         i.classList.remove('open');
         const b = i.querySelector('.faq-q');
+        const a = i.querySelector('.faq-a');
         if (b) b.setAttribute('aria-expanded', 'false');
+        if (a) a.style.maxHeight = '0px';
       });
 
       // Open clicked if it was closed
       if (!isOpen) {
         item.classList.add('open');
         btn.setAttribute('aria-expanded', 'true');
+        ans.style.maxHeight = `${ans.scrollHeight}px`;
         // Scroll into view if needed
         setTimeout(() => {
           const rect = item.getBoundingClientRect();

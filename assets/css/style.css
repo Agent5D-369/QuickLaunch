@@ -1,3 +1,11 @@
+@import url('../../tokens.css');
+
+/* Hallmark · genre: modern-minimal · macrostructure: multi-page system
+ * design-system: design.md · designed-as-app
+ * pre-emit critique: P5 H5 E4 S5 R5 V4
+ * contrast: pass (40-41) · mobile: pass (34, 49, 50-57)
+ */
+
 /* ============================================================
    QUICKLAUNCH CONSULTING — MASTER STYLESHEET
    2026 Design System | Mobile-First | Dark Theme
@@ -8,32 +16,32 @@
 /* ── DESIGN TOKENS ─────────────────────────────────────────── */
 :root {
   /* Brand Colors */
-  --navy:        #060D1B;
-  --navy-2:      #0A1628;
-  --navy-3:      #0F2040;
-  --navy-4:      #162848;
-  --blue:        #0A6EFF;
-  --blue-2:      #2E90FF;
-  --blue-3:      #00C6FF;
-  --orange:      #FF6B2B;
-  --orange-2:    #FF8C55;
-  --gold:        #F5A623;
+  --navy:        var(--color-paper);
+  --navy-2:      var(--color-paper-2);
+  --navy-3:      var(--color-paper-3);
+  --navy-4:      var(--color-rule);
+  --blue:        var(--color-signal);
+  --blue-2:      var(--color-signal);
+  --blue-3:      var(--color-signal);
+  --orange:      var(--color-accent);
+  --orange-2:    var(--color-accent-hover);
+  --gold:        var(--color-focus);
   --green:       #22C55E;
   --red:         #EF4444;
-  --white:       #FFFFFF;
-  --off-white:   #F8FAFC;
-  --muted:       #94A3B8;
-  --muted-2:     #64748B;
-  --border:      rgba(255,255,255,0.08);
-  --border-2:    rgba(255,255,255,0.12);
+  --white:       var(--color-ink);
+  --off-white:   var(--color-light);
+  --muted:       var(--color-ink-2);
+  --muted-2:     var(--color-ink-3);
+  --border:      var(--color-rule-soft);
+  --border-2:    var(--color-rule);
 
   /* Gradients */
-  --grad-blue:   linear-gradient(135deg, #0A6EFF 0%, #00C6FF 100%);
-  --grad-orange: linear-gradient(135deg, #FF6B2B 0%, #F5A623 100%);
-  --grad-hero:   radial-gradient(ellipse at 20% 50%, #0F2040 0%, #060D1B 70%);
-  --grad-card:   linear-gradient(135deg, rgba(10,110,255,0.08) 0%, rgba(0,198,255,0.04) 100%);
-  --grad-text-blue: linear-gradient(135deg, #0A6EFF 0%, #00C6FF 60%, #3B9EFF 100%);
-  --grad-text-orange: linear-gradient(135deg, #FF6B2B 0%, #F5A623 100%);
+  --grad-blue:   var(--color-signal);
+  --grad-orange: var(--color-accent);
+  --grad-hero:   var(--color-paper);
+  --grad-card:   var(--color-paper-3);
+  --grad-text-blue: var(--color-signal);
+  --grad-text-orange: var(--color-accent);
 
   /* Glass */
   --glass:       rgba(255,255,255,0.04);
@@ -42,8 +50,8 @@
   --glass-strong:rgba(10,22,40,0.8);
 
   /* Typography */
-  --font-h:      'Montserrat', sans-serif;
-  --font-b:      'Inter', sans-serif;
+  --font-h:      var(--font-display);
+  --font-b:      var(--font-body);
 
   /* Fluid Type Scale */
   --text-xs:     clamp(0.875rem, 1.5vw, 0.9375rem);
@@ -80,10 +88,10 @@
 
   /* Radii */
   --r-sm:   8px;
-  --r-md:   16px;
-  --r-lg:   24px;
-  --r-xl:   40px;
-  --r-pill: 100px;
+  --r-md:   var(--radius-card);
+  --r-lg:   var(--radius-card);
+  --r-xl:   var(--radius-card);
+  --r-pill: var(--radius-pill);
 
   /* Shadows */
   --shadow-sm:     0 1px 4px rgba(0,0,0,0.4);
@@ -94,10 +102,10 @@
   --shadow-glow:   0 0 60px rgba(10,110,255,0.15);
 
   /* Transitions */
-  --t-fast:   0.15s ease;
-  --t-base:   0.3s cubic-bezier(0.4,0,0.2,1);
-  --t-slow:   0.6s cubic-bezier(0.4,0,0.2,1);
-  --t-spring: 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  --t-fast:   var(--dur-short) var(--ease-out);
+  --t-base:   var(--dur-base) var(--ease-out);
+  --t-slow:   0.45s var(--ease-out);
+  --t-spring: var(--dur-base) var(--ease-out);
 
   /* Z-index */
   --z-base:    1;
@@ -1631,5 +1639,255 @@ footer {
   .product-lineage-link {
     font-size: var(--text-xs);
     white-space: nowrap;
+  }
+}
+
+/* Hallmark system application: shared visual and interaction rules. */
+html,
+body {
+  overflow-x: clip;
+}
+
+:is(h1, h2, h3, p, li, a, button, label, summary) {
+  overflow-wrap: anywhere;
+}
+
+:is(.hero-inner, .hero-content, .hero-offer, .container, .grid, .card, [class*="-grid"]) > * {
+  min-width: 0;
+}
+
+.hero-bg-gradient,
+.final-cta-bg {
+  background: var(--navy-2);
+}
+
+.hero-grid {
+  opacity: 0.22;
+  mask-image: none;
+}
+
+.orb {
+  display: none;
+}
+
+.text-gradient,
+.text-gradient-orange {
+  background: none;
+  color: inherit;
+  -webkit-text-fill-color: currentColor;
+}
+
+.hero-h1 .text-gradient,
+.final-cta-h2 .text-gradient {
+  color: var(--orange);
+}
+
+.nav-logo-rocket {
+  display: none;
+}
+
+.nav-logo::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  background: url("../images/quicklaunch-icon.png") center / contain no-repeat;
+}
+
+.section-label {
+  display: none;
+}
+
+.hero-eyebrow {
+  letter-spacing: 0.08em;
+}
+
+.section > .container > .text-center:not(.final-cta-inner) {
+  max-width: 52rem;
+  margin-inline: 0;
+  text-align: left;
+}
+
+.section-h2,
+.final-cta-h2 {
+  max-width: 22ch;
+}
+
+.section-sub {
+  max-width: 66ch;
+}
+
+.btn {
+  border-radius: var(--r-sm);
+  box-shadow: none;
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+.btn::after {
+  display: none;
+}
+
+.btn-primary,
+.btn-primary:hover {
+  color: var(--color-accent-ink);
+  box-shadow: none;
+}
+
+.btn:hover,
+.btn:active {
+  transform: none;
+}
+
+.btn:active {
+  filter: brightness(0.92);
+}
+
+:is(a, button, input, textarea, select, summary):focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+:is(button, .btn):disabled,
+:is(button, .btn)[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.52;
+  pointer-events: none;
+}
+
+:is(.hero-offer-card, .truth-card, .archetype-card, .phase-card, .testimonial-card, .final-cta-option) {
+  border-radius: var(--radius-card);
+  box-shadow: none;
+}
+
+:is(.hero-offer-card, .truth-card, .archetype-card, .phase-card, .testimonial-card, .final-cta-option):hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.hero-offer-card {
+  background: var(--navy-3);
+  border-color: var(--border-2);
+}
+
+.hero-offer-card::before,
+.archetype-card::after {
+  content: none;
+}
+
+.truth-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 var(--sp-10);
+  counter-reset: hallmark-truth;
+}
+
+.truth-card {
+  counter-increment: hallmark-truth;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  align-items: start;
+  gap: var(--sp-4);
+  padding: var(--sp-6) 0;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+}
+
+.truth-card::before {
+  content: counter(hallmark-truth, decimal-leading-zero);
+  position: static;
+  width: auto;
+  height: auto;
+  background: none;
+  color: var(--orange);
+  font-family: var(--font-h);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  opacity: 1;
+}
+
+.truth-icon {
+  display: none;
+}
+
+.truth-card p {
+  color: var(--white);
+  font-size: var(--text-lg);
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.archetype-card {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--border-2);
+  border-radius: 0;
+  padding-inline: 0;
+}
+
+.archetype-number {
+  background: none;
+  color: var(--blue);
+  -webkit-text-fill-color: currentColor;
+}
+
+.archetype-icon {
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.phase-card,
+.testimonial-card,
+.final-cta-option {
+  background: var(--navy-3);
+  border-color: var(--border-2);
+}
+
+.phase-card::before {
+  background: var(--orange);
+}
+
+.final-cta-options {
+  gap: var(--sp-4);
+}
+
+section:not(.hero) :is(.reveal, .reveal-left, .reveal-right) {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+@media (max-width: 767px) {
+  .truth-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-line {
+    display: block;
+    white-space: normal;
+  }
+
+  .hero-actions .btn,
+  .service-actions .btn {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

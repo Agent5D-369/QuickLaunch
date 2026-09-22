@@ -1,0 +1,48 @@
+:root {
+  --color-paper: oklch(17% 0.025 255);
+  --color-paper-2: oklch(21% 0.03 255);
+  --color-paper-3: oklch(25% 0.035 255);
+  --color-ink: oklch(97% 0.008 250);
+  --color-ink-2: oklch(76% 0.028 250);
+  --color-ink-3: oklch(62% 0.035 250);
+  --color-rule: oklch(44% 0.035 250 / 0.45);
+  --color-rule-soft: oklch(44% 0.035 250 / 0.24);
+  --color-accent: oklch(70% 0.18 45);
+  --color-accent-hover: oklch(75% 0.17 48);
+  --color-accent-ink: oklch(17% 0.025 255);
+  --color-signal: oklch(67% 0.17 250);
+  --color-signal-soft: oklch(67% 0.17 250 / 0.12);
+  --color-focus: oklch(79% 0.15 78);
+  --color-light: oklch(96% 0.012 245);
+  --color-light-2: oklch(92% 0.018 245);
+  --color-light-ink: oklch(22% 0.035 255);
+  --color-rule-light: oklch(22% 0.035 255 / 0.2);
+
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
+
+  --text-caption: 0.875rem;
+  --text-small: 0.9375rem;
+  --text-body: clamp(1rem, 2vw, 1.0625rem);
+  --text-lede: clamp(1.0625rem, 2.2vw, 1.1875rem);
+  --text-display: clamp(2.5rem, 7vw, 4.5rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-short: 160ms;
+  --dur-base: 260ms;
+  --radius-card: 8px;
+  --radius-control: 8px;
+  --radius-pill: 999px;
+  --rule-thin: 1px;
+}

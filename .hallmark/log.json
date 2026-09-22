@@ -1,0 +1,36 @@
+[
+  {
+    "scope": "app",
+    "genre": "modern-minimal",
+    "theme": "custom",
+    "macrostructure": "multi-page editorial conversion system",
+    "layoutPrinciples": [
+      "asymmetric marquee",
+      "editorial index",
+      "offset hero",
+      "proof ledger",
+      "long document",
+      "workbench form"
+    ],
+    "palette": "QuickLaunch navy, off-white, orange action, blue signal",
+    "typography": "Montserrat display with Inter body",
+    "designSystem": "design.md",
+    "tokenFile": "tokens.css",
+    "assets": [
+      "assets/images/hero-architecture-canva.jpg",
+      "assets/images/landing-fix-structure-01.jpg",
+      "assets/images/landing-take-diagnostic-01.jpg",
+      "assets/images/quicklaunch-regenerative-path-process.png",
+      "assets/images/rick-broider.jpg"
+    ],
+    "assetDecision": "Existing real photography and process diagrams support comprehension; no decorative generated imagery added.",
+    "scores": {
+      "P": 5,
+      "H": 5,
+      "E": 4,
+      "S": 5,
+      "R": 5,
+      "V": 4
+    }
+  }
+]

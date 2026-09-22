@@ -7,6 +7,14 @@
 - The Path: https://quicklaunchconsulting.com/the-path.html
 - Apply / Fit Call: https://quicklaunchconsulting.com/apply.html
 
+
+## QuickLaunch-Created Product Line
+- Saberra: https://saberra.com/
+- Product overview: https://saberra.com/product/
+- How Saberra works: https://saberra.com/how-it-works/
+- Implementation: https://saberra.com/implementation/
+- Relationship: QuickLaunch Consulting created the Saberra product line as the software expression of its work in institutional memory, decision rights, accountable AI, governance, and operating continuity.
+
 ## AI + Operations Services
 - Overview: https://quicklaunchconsulting.com/ai-systems.html
 - AI Operating System Build: https://quicklaunchconsulting.com/ai-operating-system.html

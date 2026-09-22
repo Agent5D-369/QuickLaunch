@@ -815,6 +815,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   border-radius: var(--r-lg); padding: var(--sp-8);
   display: flex; flex-direction: column; gap: var(--sp-4);
   transition: var(--t-base); position: relative; overflow: hidden;
+  color: inherit; cursor: pointer;
 }
 .archetype-card::after {
   content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
@@ -825,7 +826,15 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   background: var(--glass-2); transform: translateY(-6px);
   border-color: rgba(10,110,255,0.25); box-shadow: var(--shadow-lg), var(--shadow-blue);
 }
-.archetype-card:hover::after { transform: scaleX(1); }
+.archetype-card:hover::after,
+.archetype-card:focus-visible::after { transform: scaleX(1); }
+.archetype-card:focus-visible {
+  outline: 3px solid var(--blue-2); outline-offset: 4px;
+  background: var(--glass-2); border-color: rgba(10,110,255,0.35);
+  box-shadow: var(--shadow-lg), var(--shadow-blue);
+}
+.archetype-card:focus-visible .archetype-cta,
+.archetype-card:hover .archetype-cta { color: var(--blue-3); gap: var(--sp-3); }
 
 .archetype-number {
   font-family: var(--font-h); font-size: var(--text-5xl); font-weight: 900;

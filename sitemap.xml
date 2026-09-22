@@ -6,7 +6,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://quicklaunchconsulting.com/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -44,21 +44,21 @@
 
   <url>
     <loc>https://quicklaunchconsulting.com/founder-advisor.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://quicklaunchconsulting.com/mvp-validation-consultant.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://quicklaunchconsulting.com/fractional-coo-consultant.html</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -138,6 +138,18 @@
   <url>
     <loc>https://quicklaunchconsulting.com/regenerative-ai-workforce.html</loc>
     <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quicklaunchconsulting.com/regenerative-project-governance.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quicklaunchconsulting.com/expert-offer-positioning.html</loc>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

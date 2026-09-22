@@ -232,6 +232,20 @@ function hasDiagnosticAccess() {
   counters.forEach(el => obs.observe(el));
 })();
 
+
+(function initApplyArchetypePrefill() {
+  const requestedArchetype = new URLSearchParams(window.location.search).get('archetype');
+  if (!requestedArchetype) return;
+
+  const archetypeOptions = document.querySelectorAll('input[name="archetype"]');
+  const matchingOption = Array.from(archetypeOptions).find(
+    option => option.value.toLowerCase() === requestedArchetype.toLowerCase()
+  );
+  if (!matchingOption) return;
+
+  matchingOption.checked = true;
+  matchingOption.dispatchEvent(new Event('change', { bubbles: true }));
+})();
 // ── FORMSPREE AJAX FORMS ─────────────────────────────────────
 (function initForms() {
   const forms = document.querySelectorAll('form[action*="formspree"]');
@@ -340,7 +354,15 @@ function hasDiagnosticAccess() {
     const href = anchor.getAttribute('href') || '';
     const label = (anchor.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 80);
 
-    if (href.includes('apply.html#fit-call')) {
+    if (anchor.matches('.archetype-card')) {
+      trackEvent('archetype_card_click', {
+        archetype: anchor.dataset.archetype || label,
+        href
+      });
+      return;
+    }
+
+    if (href.includes('apply.html') && href.includes('#fit-call')) {
       trackEvent('book_fit_call_click', { href, label });
       return;
     }

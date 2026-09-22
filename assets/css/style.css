@@ -199,7 +199,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
 .btn:active { transform: scale(0.97); }
 
 .btn-primary {
-  background: var(--grad-orange); color: var(--white);
+  background: var(--grad-orange); color: var(--navy);
   box-shadow: var(--shadow-orange);
 }
 .btn-primary:hover {
@@ -283,6 +283,8 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   letter-spacing: 0.02em;
 }
 .nav-links a:hover { color: var(--white); }
+.nav-links .btn-primary,
+.nav-links .btn-primary:hover { color: var(--navy); }
 .nav-cta { color: var(--white) !important; }
 
 .nav-toggle {
@@ -311,6 +313,8 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   color: var(--muted); transition: var(--t-base); text-align: center;
 }
 #mobile-menu a:hover { color: var(--white); }
+#mobile-menu a.btn-primary,
+#mobile-menu a.btn-primary:hover { color: var(--navy); }
 #mobile-menu .btn { font-size: var(--text-xl); }
 
 /* ── HERO ───────────────────────────────────────────────────── */

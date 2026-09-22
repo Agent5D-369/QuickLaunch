@@ -23,7 +23,7 @@ html,body{overflow-x:clip}
 .path-hero-copy,.path-hero-visual,.apply-layout>*,.apply-layout .reveal-right,.tab-panel,.apply-form-card{min-width:0;max-width:100%}
 .path-hero-title,.path-hero-title span{overflow-wrap:normal;word-break:normal;white-space:normal}
 .toc-bar,.tab-switcher{max-width:100%}
-.tab-btn{min-width:0;white-space:nowrap;line-height:1.35;padding-inline:var(--sp-2);font-size:0.875rem}
+.tab-btn{min-width:0;white-space:nowrap;line-height:1.35;padding-inline:var(--sp-2);font-size:0.9375rem}
 .apply-form-card{padding:var(--sp-6)}
 }
 @media(max-width:1023px){

@@ -46,10 +46,10 @@
   --font-b:      'Inter', sans-serif;
 
   /* Fluid Type Scale */
-  --text-xs:     clamp(0.7rem,  1.5vw, 0.75rem);
-  --text-sm:     clamp(0.8rem,  1.8vw, 0.875rem);
-  --text-base:   clamp(0.9rem,  2vw,   1rem);
-  --text-lg:     clamp(1rem,    2.2vw, 1.125rem);
+  --text-xs:     clamp(0.875rem, 1.5vw, 0.9375rem);
+  --text-sm:     clamp(0.9375rem, 1.8vw, 1rem);
+  --text-base:   clamp(1rem,     2vw,   1.0625rem);
+  --text-lg:     clamp(1.0625rem, 2.2vw, 1.1875rem);
   --text-xl:     clamp(1.1rem,  2.5vw, 1.25rem);
   --text-2xl:    clamp(1.25rem, 3vw,   1.5rem);
   --text-3xl:    clamp(1.5rem,  4vw,   1.875rem);
@@ -117,14 +117,14 @@ body {
   line-height: 1.7;
   color: var(--white);
   background-color: var(--navy);
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 img, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 button { cursor: pointer; border: none; background: none; font-family: var(--font-b); }
-input, textarea, select { font-family: var(--font-b); }
+input, textarea, select { font-family: var(--font-b); font-size: var(--text-base); }
 ul { list-style: none; }
 h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 800; }
 
@@ -410,7 +410,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   }
   .hero-proofline {
     margin-bottom: var(--sp-4);
-    font-size: 0.82rem;
+    font-size: 0.9375rem;
   }
   .hero-actions {
     margin-bottom: var(--sp-4);
@@ -445,7 +445,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
     margin-bottom: var(--sp-3);
   }
   .hero-body {
-    font-size: 0.92rem;
+    font-size: 1rem;
     line-height: 1.45;
     margin-bottom: var(--sp-3);
   }
@@ -459,7 +459,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
     font-size: 1.15rem;
   }
   .hero-stat span {
-    font-size: 0.62rem;
+    font-size: 0.875rem;
     line-height: 1.2;
   }
   .hero-proofline {
@@ -471,7 +471,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   }
   .hero-actions .btn {
     padding: 0.85rem 1.2rem;
-    font-size: 0.88rem;
+    font-size: 0.9375rem;
   }
   .hero-stats {
     display: none;
@@ -492,7 +492,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   .hero-offer-body,
   .hero-offer-points li,
   .form-disclaimer {
-    font-size: 0.84rem;
+    font-size: 0.9375rem;
     line-height: 1.5;
   }
 }
@@ -1012,7 +1012,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-h); line-height: 1.15; font-weight: 
   margin: 0 auto;
 }
 .connector-label {
-  text-align: center; font-size: 10px; font-weight: 700;
+  text-align: center; font-size: 0.875rem; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--muted-2); white-space: nowrap;
   padding: var(--sp-2) var(--sp-3);
@@ -1302,7 +1302,7 @@ footer {
   display: grid; grid-template-columns: 1fr; gap: var(--sp-10);
   margin-bottom: var(--sp-12);
 }
-@media (min-width: 768px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; } }
+@media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; } }
 .footer-brand p { color: var(--muted); font-size: var(--text-sm); margin-top: var(--sp-4); max-width: 280px; }
 .footer-logo { height: 44px; width: auto; margin-bottom: var(--sp-4); }
 .footer-logo-text {
@@ -1486,7 +1486,7 @@ footer {
   .hero-ctas .btn {
     min-height: 48px;
     padding: 0.9rem 1.1rem;
-    font-size: 0.92rem;
+    font-size: 1rem;
   }
   .hero-proofline {
     margin-bottom: var(--sp-4);
@@ -1501,7 +1501,7 @@ footer {
     padding-top: var(--sp-3);
   }
   .hero-stat strong { font-size: 1.45rem; }
-  .hero-stat span { font-size: 0.68rem; }
+  .hero-stat span { font-size: 0.875rem; }
   .hero-offer {
     width: 100%;
     max-width: 420px;
@@ -1549,13 +1549,13 @@ footer {
     font-size: 1.25rem;
   }
   .nav-logo-rocket {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   .hero-h1 {
     font-size: clamp(2rem, 8.4vw, 2.7rem);
   }
   .hero-body {
-    font-size: 0.96rem;
+    font-size: 1rem;
   }
   .hero-proofline {
     display: none;
@@ -1571,7 +1571,7 @@ footer {
 
 @media (max-width: 639px) {
   :root {
-    --text-xs: 0.8125rem;
+    --text-xs: 0.875rem;
     --text-sm: 0.9375rem;
     --text-base: 1.0625rem;
   }
@@ -1626,4 +1626,10 @@ footer {
   .product-lineage-grid { grid-template-columns: minmax(0, 1fr); }
   .product-lineage-links { width: 100%; }
   .product-lineage-links .btn { width: 100%; }
+}
+@media (max-width: 360px) {
+  .product-lineage-link {
+    font-size: var(--text-xs);
+    white-space: nowrap;
+  }
 }

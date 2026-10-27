@@ -8,37 +8,8 @@
 const DIAGNOSTIC_ACCESS_KEY = 'quicklaunchDiagnosticAccess';
 
 function trackEvent(name, params = {}) {
-  if (typeof window.gtag === 'function') {
-    window.gtag('event', name, params);
-  }
+  if (window.QuickLaunchPrivacy) window.QuickLaunchPrivacy.track(name, params);
 }
-
-(function initMeasurement() {
-  const cfg = window.QUICKLAUNCH_CONFIG || {};
-
-  if (cfg.ga4MeasurementId) {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(cfg.ga4MeasurementId)}`;
-    document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function gtag(){ window.dataLayer.push(arguments); };
-    window.gtag('js', new Date());
-    window.gtag('config', cfg.ga4MeasurementId, {
-      page_title: document.title,
-      page_location: window.location.href
-    });
-  }
-
-  if (cfg.clarityProjectId) {
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments);};
-      t=l.createElement(r);t.async=1;t.src=`https://www.clarity.ms/tag/${i}`;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, 'clarity', 'script', cfg.clarityProjectId);
-  }
-})();
 
 function grantDiagnosticAccess() {
   try {
@@ -51,7 +22,10 @@ function hasDiagnosticAccess() {
     const raw = localStorage.getItem(DIAGNOSTIC_ACCESS_KEY);
     if (!raw) return false;
     const parsed = JSON.parse(raw);
-    return Boolean(parsed && parsed.grantedAt);
+    const valid = parsed && Number.isFinite(parsed.grantedAt) && parsed.grantedAt <= Date.now()
+      && Date.now() - parsed.grantedAt < 30 * 24 * 60 * 60 * 1000;
+    if (!valid) localStorage.removeItem(DIAGNOSTIC_ACCESS_KEY);
+    return Boolean(valid);
   } catch {
     return false;
   }
@@ -305,7 +279,7 @@ function hasDiagnosticAccess() {
           data.append('form_id', form.id);
         }
         if (!data.has('page_url')) {
-          data.append('page_url', window.location.href);
+          data.append('page_url', window.location.origin + window.location.pathname);
         }
         if (!data.has('page_title')) {
           data.append('page_title', document.title);
@@ -399,6 +373,8 @@ function hasDiagnosticAccess() {
 (function initDiagnosticAccessGate() {
   const path = window.location.pathname || '';
   if (!/diagnostic\.html$/i.test(path)) return;
+  try { localStorage.setItem('qlStorageProbe', '1'); localStorage.removeItem('qlStorageProbe'); }
+  catch { return; } // Storage blocking must not cause a repeated inquiry loop.
   if (hasDiagnosticAccess()) return;
   window.location.replace('index.html#diagnostic-access');
 })();

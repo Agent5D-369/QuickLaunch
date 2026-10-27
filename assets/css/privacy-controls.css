@@ -1,0 +1,29 @@
+/* Hallmark · component scope: privacy controls · locked design.md tokens */
+html,body { overflow-x:clip; }
+.legal-footer { border-top:var(--rule-thin) solid var(--color-rule); padding-block:var(--space-lg); margin-top:var(--space-lg); color:var(--color-ink-2); background:var(--color-paper); }
+.legal-footer nav { display:flex; flex-wrap:wrap; gap:var(--space-2xs) var(--space-md); }
+.legal-footer nav a,.legal-footer nav button { color:var(--color-ink); font-family:var(--font-body); font-size:var(--text-small); min-height:44px; display:inline-flex; align-items:center; white-space:nowrap; }
+.legal-footer p { font-size:var(--text-caption); margin-top:var(--space-sm); }
+.collection-notice { font-size:var(--text-small); line-height:1.7; margin-block:var(--space-md); color:var(--color-ink-2); grid-column:1/-1; flex-basis:100%; }
+.collection-notice a { text-decoration:underline; text-underline-offset:.2em; }
+.privacy-banner { position:fixed; inset:auto var(--space-sm) var(--space-sm); z-index:var(--z-modal); background:var(--color-paper-3); color:var(--color-ink); border:var(--rule-thin) solid var(--color-ink-2); border-radius:var(--radius-card); padding:var(--space-md); max-width:52rem; margin-inline:auto; max-height:75dvh; overflow:auto; }
+.privacy-banner h2,.privacy-dialog h2 { font-family:var(--font-display); font-size:1.25rem; font-weight:800; line-height:1.35; margin:0 0 var(--space-2xs); font-style:normal; overflow-wrap:anywhere; }
+.privacy-banner p,.privacy-dialog p { font-size:var(--text-small); line-height:1.65; margin:0 0 var(--space-sm); }
+.privacy-banner a,.privacy-dialog a { text-decoration:underline; text-underline-offset:.2em; }
+.privacy-actions { display:flex; flex-wrap:wrap; gap:var(--space-2xs); }
+.legal-button,.privacy-actions button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:var(--space-2xs) var(--space-sm); border:var(--rule-thin) solid var(--color-ink-2); border-radius:var(--radius-control); background:var(--color-paper-3); color:var(--color-ink); font-family:var(--font-body); font-weight:600; font-size:var(--text-small); line-height:1.4; white-space:nowrap; transition:background-color var(--dur-short) var(--ease-out); }
+.privacy-dialog { position:fixed; inset:0; margin:auto; height:fit-content; width:calc(100% - 2 * var(--space-sm)); max-width:36rem; max-height:85dvh; padding:var(--space-lg); border:var(--rule-thin) solid var(--color-ink-2); border-radius:var(--radius-card); background:var(--color-paper-2); color:var(--color-ink); overflow:auto; }
+.privacy-dialog::backdrop { background:var(--color-backdrop); }
+.privacy-choice { display:flex; gap:var(--space-sm); align-items:center; min-height:52px; padding-block:var(--space-sm); border-block:var(--rule-thin) solid var(--color-rule); margin-block:var(--space-sm); font-weight:700; }
+.privacy-choice input { accent-color:var(--color-accent); width:24px; height:24px; }
+.privacy-choice small { display:block; color:var(--color-ink-2); font-size:var(--text-caption); font-weight:400; }
+.privacy-feedback { min-height:1.6em; color:var(--color-focus); }
+.privacy-dialog [aria-busy="true"] { cursor:progress; }
+.privacy-actions button:disabled,.legal-button:disabled { opacity:.55; cursor:not-allowed; }
+.privacy-actions button:active,.legal-button:active { background:var(--color-paper); }
+.privacy-actions button:focus-visible,.legal-button:focus-visible,.privacy-choice input:focus-visible,.legal-footer a:focus-visible,.legal-footer button:focus-visible,.collection-notice a:focus-visible,.privacy-banner a:focus-visible,.privacy-dialog a:focus-visible { outline:2px solid var(--color-focus); outline-offset:4px; }
+[hidden] { display:none!important; }
+@media(hover:hover) { .privacy-actions button:hover,.legal-button:hover { background:var(--color-paper); } .legal-footer a:hover,.legal-footer button:hover { text-decoration:underline; text-underline-offset:.2em; } }
+@media(min-width:40rem) { .privacy-banner { padding:var(--space-md) var(--space-lg); } }
+@media(prefers-reduced-motion:reduce) { .privacy-actions button,.legal-button { transition:none; } }
+@media print { .privacy-banner,.privacy-dialog,.legal-footer button { display:none!important; } }

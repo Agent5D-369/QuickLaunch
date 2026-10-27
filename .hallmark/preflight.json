@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-27",
+  "framework": "static HTML/CSS/JavaScript",
+  "designSystem": "design.md",
+  "tokens": "tokens.css",
+  "fonts": "locally hosted Inter and Montserrat",
+  "motion": "native CSS, reduced motion respected",
+  "scope": "legal pages and privacy controls",
+  "verifiedWidths": [
+    320,
+    375,
+    414,
+    768,
+    1440
+  ]
+}

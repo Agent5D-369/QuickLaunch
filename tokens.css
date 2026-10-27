@@ -17,6 +17,7 @@
   --color-light-2: oklch(92% 0.018 245);
   --color-light-ink: oklch(22% 0.035 255);
   --color-rule-light: oklch(22% 0.035 255 / 0.2);
+  --color-backdrop: oklch(17% 0.025 255 / 0.8);
 
   --font-display: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;

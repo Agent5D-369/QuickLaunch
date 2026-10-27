@@ -32,5 +32,23 @@
       "R": 5,
       "V": 4
     }
+  },
+  {
+    "date": "2026-10-27",
+    "scope": "legal pages and privacy controls",
+    "genre": "modern-minimal",
+    "theme": "existing locked QuickLaunch brand",
+    "macrostructure": "long document",
+    "designSystem": "design.md",
+    "tokenFile": "tokens.css",
+    "scores": {
+      "P": 5,
+      "H": 5,
+      "E": 4,
+      "S": 5,
+      "R": 5,
+      "V": 4
+    },
+    "verification": "145 layout checks and 12 privacy behavior checks; no generated imagery"
   }
 ]
